@@ -9,14 +9,24 @@ import android.widget.Button;
 
 public class event_offical extends AppCompatActivity {
 
-    Button button;
+    Button button1;
+    Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_offical);
 
-        button = findViewById(R.id.T_btn_book);
-        button.setOnClickListener(new View.OnClickListener() {
+        button1 = findViewById(R.id.T_btn_book);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(event_offical.this,Add_Event.class);
+                startActivity(intent);
+            }
+        });
+
+        button2 = findViewById(R.id.t_btn_view);
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(event_offical.this,List_Event.class);
