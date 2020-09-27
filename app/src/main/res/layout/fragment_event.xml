@@ -8,15 +8,18 @@
 
     <Button
         android:id="@+id/b_event_book"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="626dp"
-        android:background="?android:attr/colorMultiSelectHighlight"
-        android:backgroundTint="#DF8704"
+        android:layout_width="230dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="660dp"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:backgroundTint="?android:attr/colorActivatedHighlight"
+        android:fontFamily="@font/berkshire_swash"
         android:text="@string/book"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

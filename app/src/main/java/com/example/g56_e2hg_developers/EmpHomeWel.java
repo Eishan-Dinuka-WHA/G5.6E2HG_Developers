@@ -21,12 +21,12 @@ public class EmpHomeWel extends AppCompatActivity {
         setContentView(R.layout.activity_emp_home_wel);
 
 
-        imageView1 = findViewById(R.id.add);
-        imageView2 = findViewById(R.id.addlist);
-        imageView3 = findViewById(R.id.addat);
-        imageView4 = findViewById(R.id.addatl);
-        imageView5 = findViewById(R.id.sal);
-        imageView6 = findViewById(R.id.sall);
+        imageView1 = findViewById(R.id.adde);
+        imageView2 = findViewById(R.id.addel);
+        imageView3 = findViewById(R.id.adda);
+        imageView4 = findViewById(R.id.addal);
+        imageView5 = findViewById(R.id.adds);
+        imageView6 = findViewById(R.id.addsl);
 
 
         imageView1.setOnClickListener(new View.OnClickListener() {
@@ -76,9 +76,6 @@ public class EmpHomeWel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
 
     }
 }
