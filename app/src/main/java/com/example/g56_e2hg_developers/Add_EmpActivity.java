@@ -26,6 +26,7 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
     private Spinner txtgen;
     private EditText txtedu;
 
+
     private Button mAdd_btn;
     private Button mBack_btn;
 
