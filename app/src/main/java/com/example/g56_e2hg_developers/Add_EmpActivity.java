@@ -36,23 +36,23 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
         setContentView(R.layout.activity_add__emp);
 
 //        change spinner colour ------------------------------------------------------------------------------------------------------
-        Spinner coloredSpinner = findViewById(R.id.etgen);
+        Spinner coloredSpinner = findViewById(R.id.ett_gen);
         ArrayAdapter adapter = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
         coloredSpinner.setAdapter(adapter);
         coloredSpinner.setOnItemSelectedListener(this);
 // -----------------------------------------------------------------------------------------------------------------------------------
-        txtID = (EditText) findViewById(R.id.ett_date);
+        txtID = (EditText) findViewById(R.id.ett_no);
         txtFname = (EditText) findViewById(R.id.ett_name);
-        txtmob =  (EditText) findViewById(R.id.ett_email);
-        txtadd = (EditText) findViewById(R.id.ett_ename);
-        txtdesign = (EditText) findViewById(R.id.ett_nog);
-        txttype = (EditText) findViewById(R.id.ett_date);
-        txtgen = (Spinner) findViewById(R.id.etgen);
-        txtedu = (EditText) findViewById(R.id.ett_nop);
+        txtmob =  (EditText) findViewById(R.id.ett_mob);
+        txtadd = (EditText) findViewById(R.id.ett_add);
+        txtdesign = (EditText) findViewById(R.id.ett_des);
+        txttype = (EditText) findViewById(R.id.ett_etype);
+        txtgen = (Spinner) findViewById(R.id.ett_gen);
+        txtedu = (EditText) findViewById(R.id.ett_edu);
 
-        mAdd_btn = (Button) findViewById(R.id.update_btn);
-        mBack_btn = (Button) findViewById(R.id.delete_btn);
+        mAdd_btn = (Button) findViewById(R.id.sub_btn);
+        mBack_btn = (Button) findViewById(R.id.back_btn);
 
         mAdd_btn.setOnClickListener(new View.OnClickListener() {
             @Override

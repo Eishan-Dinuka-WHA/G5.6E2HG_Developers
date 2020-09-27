@@ -25,8 +25,6 @@ public class Add_Event extends AppCompatActivity {
 
     private Button mAdd_btn;
     private Button mBack_btn;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
