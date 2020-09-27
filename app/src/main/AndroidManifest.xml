@@ -8,7 +8,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EmployeeDetailsActivity"></activity>
+        <activity android:name=".List_Event"></activity>
+        <activity android:name=".EventDetailsActivity" />
+        <activity android:name=".Add_Event" />
+        <activity android:name=".event_offical" />
+        <activity android:name=".event_social_home" />
+        <activity android:name=".Event_Take_heart_Home" />
+        <activity android:name=".EventHomeWel" />
+        <activity android:name=".EmployeeDetailsActivity" />
         <activity android:name=".List_Employee" />
         <activity android:name=".Add_EmpActivity" />
         <activity android:name=".LoginActivity">
@@ -20,6 +27,10 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".EmpHomeWel" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

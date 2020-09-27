@@ -3,5 +3,6 @@
     <string-array name="Gender_catagory">
         <item >Male</item>
         <item>Female</item>
+        <item>Other</item>
 </string-array>
 </resources>

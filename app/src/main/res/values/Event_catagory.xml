@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Event_catagory">
+        <item>Take Heart Events</item>
+        <item>Social Events</item>
+        <item>Official Events</item>
+    </string-array>
+
+    <string-array name="Hall_Type">
+        <item>Diamond Hall</item>
+        <item>Gold Hall</item>
+        <item>Silver Hall</item>
+    </string-array>
+</resources>

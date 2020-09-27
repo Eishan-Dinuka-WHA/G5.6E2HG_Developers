@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/empb"
-    android:gravity="center"
+    android:background="@drawable/eventb"
     android:orientation="vertical"
-    tools:context=".Add_EmpActivity">
+    tools:context=".EventDetailsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,7 +25,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="0dp"
                 android:paddingBottom="0dp"
-                app:srcCompat="@drawable/em2" />
+                app:srcCompat="@drawable/e4" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -42,16 +41,34 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
-                <EditText
-                    android:id="@+id/ett_date"
+                <TextView
+                    android:id="@+id/view1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:ems="10"
-                    android:hint="@string/E_Registraion"
+                    android:hint="@string/event_type"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/ett_etype"
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:ems="10"
+                    android:entries="@array/Event_catagory"
+                    android:hint="@string/gender"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,14 +78,14 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark" />
+                android:textColorHint="@color/colorPrimaryDark" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_name"
@@ -80,7 +97,9 @@
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -88,19 +107,21 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/moblile_no"
+                    android:hint="@string/e_mail"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -108,19 +129,21 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_ename"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/E_Address"
+                    android:hint="@string/event_name"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -128,19 +151,21 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_nog"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/E_Designation"
+                    android:hint="@string/number_of_guest"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -148,19 +173,21 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/E_Emp_Type"
-                    android:inputType="text"
+                    android:hint="@string/date"
+                    android:inputType="date|text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp" />
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -168,40 +195,43 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/design_default_color_primary_dark"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <TextView
-                    android:id="@+id/gview"
+                    android:id="@+id/view2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:ems="10"
+                    android:hint="@string/hall_type"
                     android:inputType="text"
                     android:paddingLeft="30dp"
+                    android:paddingTop="20dp"
                     android:paddingRight="30dp"
+                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
 
-                    android:text="Gender"
-                    android:textColor="@color/design_default_color_primary"
-                    android:textSize="20sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                </TextView>
 
                 <Spinner
-                    android:id="@+id/etgen"
+                    android:id="@+id/ett_htype"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:ems="10"
-                    android:entries="@array/Gender_catagory"
+                    android:entries="@array/Hall_Type"
                     android:hint="@string/gender"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,18 +240,41 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_nop"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/education_details"
+                    android:hint="@string/no_of_plate"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textSize="20sp" />
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/colorPrimaryDark">
+
+                <EditText
+                    android:id="@+id/ett_hprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/plate_price"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -234,21 +287,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="?android:attr/colorEdgeEffect"
-                    android:text="@string/submit" />
+                    android:backgroundTint="?android:attr/colorMultiSelectHighlight"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:text="@string/Update" />
 
                 <Button
                     android:id="@+id/delete_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/holo_green_dark"
-                    android:text="@string/back" />
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:text="@string/delete" />
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
 

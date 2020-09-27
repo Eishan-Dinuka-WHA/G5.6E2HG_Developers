@@ -7,7 +7,7 @@
     <string name="employees">Employees</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="book">Book</string>
+    <string name="book">Booking</string>
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -60,4 +60,35 @@
     <string name="back">Back</string>
     <string name="gender">Gender</string>
     <string name="Updatess">Update</string>
+    <string name="take_heart_events">Take Heart Events</string>
+    <string name="service_includes">Service Includes</string>
+    <string name="birthday_parties">Birthday Parties</string>
+    <string name="anniversary_parties">Anniversary Parties</string>
+    <string name="bride_to_be_mam_to_be_parties">Bride to be/Mam to be parties</string>
+    <string name="baby_showers">Baby showers</string>
+    <string name="welcome_home_party">Welcome home party</string>
+    <string name="booking">Booking</string>
+    <string name="social_events">Social Events</string>
+    <string name="holiday_parties">Holiday Parties</string>
+    <string name="seasoned_celebration">Seasoned Celebration</string>
+    <string name="get_to_gehters">Get to gehters</string>
+    <string name="night_outs">Night outs</string>
+    <string name="official_events">Official Events</string>
+    <string name="conferences">Conferences</string>
+    <string name="product_launches">Product Launches</string>
+    <string name="sales_events">Sales Events</string>
+    <string name="award_dinner">Award Dinner</string>
+    <string name="retirement_parties">Retirement Parties</string>
+    <string name="e_mail">E-mail</string>
+    <string name="event_type">Event Type</string>
+    <string name="event_catagorey">Event Catagorey</string>
+    <string name="number_of_guest">Number Of Guest</string>
+    <string name="date">Date</string>
+    <string name="event_name">Event Name</string>
+    <string name="plate_price">Plate Price</string>
+    <string name="no_of_plate">No of Plate</string>
+    <string name="hall_type">Hall Type</string>
+    <string name="evbook">BOOK</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
 </resources>
