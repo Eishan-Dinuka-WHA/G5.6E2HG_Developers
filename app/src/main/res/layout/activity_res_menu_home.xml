@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/restaurantb"
+    android:orientation="vertical"
+    tools:context=".res_menu_home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/re1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:paddingBottom="10dp"
+                app:srcCompat="@drawable/rmain" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:paddingBottom="4dp"
+                app:srcCompat="@drawable/r7" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                app:srcCompat="@drawable/r2" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                app:srcCompat="@drawable/r4" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                app:srcCompat="@drawable/r7" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                app:srcCompat="@drawable/r9" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

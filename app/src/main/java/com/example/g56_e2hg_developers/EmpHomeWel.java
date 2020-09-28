@@ -15,6 +15,7 @@ public class EmpHomeWel extends AppCompatActivity {
     ImageView imageView4;
     ImageView imageView5;
     ImageView imageView6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,7 @@ public class EmpHomeWel extends AppCompatActivity {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EmpHomeWel.this, Add_EmpActivity.class);
+                Intent intent = new Intent(EmpHomeWel.this, AddAttendance.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +65,7 @@ public class EmpHomeWel extends AppCompatActivity {
         imageView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EmpHomeWel.this, Add_EmpActivity.class);
+                Intent intent = new Intent(EmpHomeWel.this, Add_Salary.class);
                 startActivity(intent);
             }
         });

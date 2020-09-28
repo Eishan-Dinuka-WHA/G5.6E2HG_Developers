@@ -103,7 +103,6 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
             return;
         }
     });
-
     }
 //---------------------------------------------------------------------------------------------------------
     // for Spppiner
@@ -115,7 +114,6 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onNothingSelected(AdapterView<?> parent)
     {
-
     }
 //----------------------------------------------------------------------------------------------------------
 }
