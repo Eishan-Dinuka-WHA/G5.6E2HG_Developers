@@ -18,10 +18,12 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
     private EditText txtFname;
     private EditText txtmob;
     private EditText txtadd;
-    private EditText txtdesign;
-    private EditText txttype;
+    private EditText txtdnic;
+    private EditText txtdob;
+    private Spinner txtdesign;
+    private Spinner txttype;
     private Spinner txtgen;
-    private EditText txtedu;
+    private Spinner txtedu;
 
     private Button mDelete_btn;
     private Button mUpdate_btn;
@@ -32,6 +34,8 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
     private String mob;
     private String add;
     private String desin;
+    private String nic;
+    private String dob;
     private String type;
     private String gen;
     private String edu;
@@ -42,7 +46,7 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
         setContentView(R.layout.activity_employee_details);
 
         //        change spinner colour ------------------------------------------------------------------------------------------------------
-        Spinner coloredSpinner = findViewById(R.id.etgen);
+        Spinner coloredSpinner = findViewById(R.id.ett_gens);
         ArrayAdapter adapter = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
         coloredSpinner.setAdapter(adapter);
@@ -56,26 +60,36 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
         mob = getIntent().getStringExtra("mob");
         add = getIntent().getStringExtra("add");
         desin = getIntent().getStringExtra("desin");
+        nic = getIntent().getStringExtra("nic");
+        dob = getIntent().getStringExtra("dob");
         type = getIntent().getStringExtra("type");
         gen = getIntent().getStringExtra("gen");
         edu = getIntent().getStringExtra("edu");
 
-        txtID = (EditText) findViewById(R.id.ett_date);
+        txtID = (EditText) findViewById(R.id.ett_no);
         txtID.setText(id);
         txtFname = (EditText) findViewById(R.id.ett_name);
         txtFname.setText(fname);
-        txtmob = (EditText) findViewById(R.id.ett_email);
+        txtmob = (EditText) findViewById(R.id.ett_mob);
         txtmob.setText(mob);
-        txtadd = (EditText) findViewById(R.id.ett_ename);
+        txtadd = (EditText) findViewById(R.id.ett_add);
         txtadd.setText(add);
-        txtdesign = (EditText) findViewById(R.id.ett_nog);
-        txtdesign.setText(desin);
-        txttype = (EditText) findViewById(R.id.ett_date);
-        txttype.setText(type);
-        txtgen = (Spinner) findViewById(R.id.etgen);
+        txtdnic = (EditText) findViewById(R.id.ett_nic);
+        txtdnic.setText(nic);
+        txtdob = (EditText) findViewById(R.id.ett_dob);
+        txtdob.setText(dob);
+
+        txtdesign = (Spinner) findViewById(R.id.ett_des);
+        txtdesign.setSelection(getIndex_spinnerItem(txtdesign, desin));
+
+        txttype = (Spinner) findViewById(R.id.ett_eetype);
+        txttype.setSelection(getIndex_spinnerItem(txttype, type));
+
+        txtgen = (Spinner) findViewById(R.id.ett_gens);
         txtgen.setSelection(getIndex_spinnerItem(txtgen, gen));
-        txtedu = (EditText) findViewById(R.id.ett_nop);
-        txtedu.setText(edu);
+
+        txtedu = (Spinner) findViewById(R.id.ett_edu);
+        txtedu.setSelection(getIndex_spinnerItem(txtedu, edu));
 
         mUpdate_btn = (Button) findViewById(R.id.update_btn);
         mDelete_btn = (Button) findViewById(R.id.delete_btn);
@@ -85,14 +99,16 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
             public void onClick(View v) {
 
                 Employee employee = new Employee();
-                employee.setId(txtID.getText().toString());
+                employee.setId(id);
                 employee.setFname(txtFname.getText().toString());
                 employee.setMob(txtmob.getText().toString());
                 employee.setAdd(txtadd.getText().toString());
-                employee.setDesin(txtdesign.getText().toString());
-                employee.setType(txttype.getText().toString());
+                employee.setNic(txtdnic.getText().toString());
+                employee.setDob(txtdob.getText().toString());
+                employee.setDesin(txtdesign.getSelectedItem().toString());
+                employee.setType(txttype.getSelectedItem().toString());
                 employee.setGen(txtgen.getSelectedItem().toString());
-                employee.setEdu(txtedu.getText().toString());
+                employee.setEdu(txtedu.getSelectedItem().toString());
 
                 new FirebaseDatabaseHelperForEmployee().UpdateEmployee(key, employee, new FirebaseDatabaseHelperForEmployee.DataStatus() {
                     @Override

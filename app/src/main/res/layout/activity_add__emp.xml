@@ -51,6 +51,7 @@
                     android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
+                    android:text="Auto Genarated"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -131,11 +132,32 @@
                 android:textColorHint="@color/design_default_color_primary_dark">
 
                 <EditText
-                    android:id="@+id/ett_des"
+                    android:id="@+id/ett_dob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/E_Designation"
+                    android:hint="@string/dob"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark">
+
+                <EditText
+                    android:id="@+id/ett_nic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/nic"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
@@ -150,17 +172,13 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
-                <EditText
-                    android:id="@+id/ett_etype"
+                <Spinner
+                    android:id="@+id/ett_des"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/E_Emp_Type"
-                    android:inputType="text"
+                    android:layout_height="60sp"
+                    android:entries="@array/Employee_desig"
                     android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp" />
+                    android:paddingRight="30dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -170,19 +188,21 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
-                <TextView
-                    android:id="@+id/gview"
+                <Spinner
+                    android:id="@+id/ett_etype"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="text"
+                    android:layout_height="60sp"
+                    android:entries="@array/Employee_type"
                     android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-
-                    android:text="Gender"
-                    android:textColor="@color/design_default_color_primary"
-                    android:textSize="20sp" />
+                    android:paddingRight="30dp" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -212,16 +232,14 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
-                <EditText
+                <Spinner
                     android:id="@+id/ett_edu"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/education_details"
-                    android:inputType="text"
+                    android:layout_height="60sp"
+                    android:entries="@array/Employee_edu"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textSize="20sp" />
+                    android:paddingBottom="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -235,6 +253,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="?android:attr/colorEdgeEffect"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:paddingTop="10dp"
                     android:text="@string/submit" />
 
                 <Button
@@ -243,6 +263,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="@android:color/holo_green_dark"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:paddingTop="10dp"
                     android:text="@string/back" />
             </LinearLayout>
 

@@ -2,6 +2,7 @@ package com.example.g56_e2hg_developers;
 
 public class Salary {
 
+    private String ename;
     private String bas;
     private String over;
     private String allow;
@@ -16,7 +17,8 @@ public class Salary {
     public Salary() {
     }
 
-    public Salary(String bas, String over, String allow, String bonus, String fest, String stamp, String epf, String earning, String deducation, String total) {
+    public Salary(String ename, String bas, String over, String allow, String bonus, String fest, String stamp, String epf, String earning, String deducation, String total) {
+        this.ename = ename;
         this.bas = bas;
         this.over = over;
         this.allow = allow;
@@ -27,6 +29,14 @@ public class Salary {
         this.earning = earning;
         this.deducation = deducation;
         this.total = total;
+    }
+
+    public String getEname() {
+        return ename;
+    }
+
+    public void setEname(String ename) {
+        this.ename = ename;
     }
 
     public String getBas() {
@@ -109,3 +119,4 @@ public class Salary {
         this.total = total;
     }
 }
+

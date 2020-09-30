@@ -3,6 +3,7 @@ package com.example.g56_e2hg_developers;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +47,44 @@ public class Add_Event extends AppCompatActivity {
         mAdd_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                String name = txtname.getText().toString().trim();
+                String email = txtemail.getText().toString().trim();
+                String ename = txtename.getText().toString().trim();
+                String nog = txtnog.getText().toString().trim();
+                String date = txtdate.getText().toString().trim();
+                String nop = txtnop.getText().toString().trim();
+                String price = txthprice.getText().toString().trim();
+
+                if (TextUtils.isEmpty(name)) {
+                    txtname.setError("Enter Name is Required.");
+                    return;
+                }
+                else if (TextUtils.isEmpty(email)) {
+                    txtemail.setError("Email is Required.");
+                    return;
+                }
+                else if (TextUtils.isEmpty(ename)) {
+                    txtename.setError("Event Name is Required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(nog)) {
+                    txtnog.setError("Enter number of guest is Required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(date)) {
+                    txtdate.setError("Enter date is Required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(nop)) {
+                    txtdate.setError("Enter Number of Plate is Required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(price)) {
+                    txtdate.setError("Enter Plate price is Required.");
+                    return;
+                }
 
                 Event event = new Event();
                 event.setEtype(txttype.getSelectedItem().toString());

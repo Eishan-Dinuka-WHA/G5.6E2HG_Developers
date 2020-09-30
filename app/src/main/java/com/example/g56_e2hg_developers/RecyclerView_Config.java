@@ -25,11 +25,13 @@ public class RecyclerView_Config {
     }
 
     class EmployeeItemView extends RecyclerView.ViewHolder {
-
+        
         private TextView mId;
         private TextView mFname;
         private TextView mMob;
         private TextView mDesin;
+        private TextView mnic;
+        private TextView mdob;
         private TextView mGen;
         private TextView mEmptype;
         private TextView mAdd;
@@ -46,6 +48,8 @@ public class RecyclerView_Config {
             mFname = (TextView) itemView.findViewById(R.id.fname_textView);
             mMob = (TextView) itemView.findViewById(R.id.mob_textView);
             mDesin = (TextView) itemView.findViewById(R.id.desin_textView);
+            mnic = (TextView) itemView.findViewById(R.id.textView_nic);
+            mdob = (TextView) itemView.findViewById(R.id.textView_dob);
             mGen = (TextView) itemView.findViewById(R.id.gen_textView);
             mEmptype = (TextView) itemView.findViewById(R.id.emptype_textView);
             mAdd = (TextView) itemView.findViewById(R.id.add_textView);
@@ -60,6 +64,8 @@ public class RecyclerView_Config {
                     intent.putExtra("fname",mFname.getText().toString());
                     intent.putExtra("mob",mMob.getText().toString());
                     intent.putExtra("desin",mDesin.getText().toString());
+                    intent.putExtra("nic",mnic.getText().toString());
+                    intent.putExtra("dob",mdob.getText().toString());
                     intent.putExtra("gen",mGen.getText().toString());
                     intent.putExtra("type",mEmptype.getText().toString());
                     intent.putExtra("add",mAdd.getText().toString());
@@ -77,6 +83,8 @@ public class RecyclerView_Config {
             mId.setText(employee.getId());
             mFname.setText(employee.getFname());
             mDesin.setText(employee.getDesin());
+            mnic.setText(employee.getNic());
+            mdob.setText(employee.getDob());
             mMob.setText(employee.getMob());
             mGen.setText(employee.getGen());
             mEmptype.setText(employee.getType());

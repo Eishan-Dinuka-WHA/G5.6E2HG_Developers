@@ -8,20 +8,22 @@ import android.view.View;
 
 import java.util.List;
 
-public class List_Employee extends AppCompatActivity {
+public class list_salary extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
 
+    private RecyclerView sRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list__employee);
-        mRecyclerView =(RecyclerView) findViewById(R.id.recyclerview_employees);
-        new FirebaseDatabaseHelperForEmployee().readEmployee(new FirebaseDatabaseHelperForEmployee.DataStatus() {
+        setContentView(R.layout.activity_list_salary);
+
+        sRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_salary);
+        new FirebaseDatabaseHelperForSalary().readSalary(new FirebaseDatabaseHelperForSalary.DataStatus() {
             @Override
-            public void DataIsLoaded(List<Employee> employees, List<String> keys) {
-                findViewById(R.id.progressBar_employee).setVisibility(View.GONE);
-                new RecyclerView_Config().setConfig(mRecyclerView,List_Employee.this,employees,keys);
+            public void DataIsLoaded(List<Salary> salaries, List<String> keys) {
+
+                findViewById(R.id.progressBar_salary).setVisibility(View.GONE);
+                new RecyclerView_Config_Salary().setConfig(sRecyclerView,list_salary.this,salaries,keys);
             }
 
             @Override

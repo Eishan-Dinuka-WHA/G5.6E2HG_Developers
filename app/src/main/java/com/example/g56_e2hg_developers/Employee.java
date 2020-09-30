@@ -5,6 +5,8 @@ public class Employee {
     private String fname;
     private String mob;
     private String add;
+    private String dob;
+    private String nic;
     private String desin;
     private String type;
     private String gen;
@@ -13,11 +15,13 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String id, String fname, String mob, String add, String desin, String type, String gen, String edu) {
+    public Employee(String id, String fname, String mob, String add, String dob, String nic, String desin, String type, String gen, String edu) {
         this.id = id;
         this.fname = fname;
         this.mob = mob;
         this.add = add;
+        this.dob = dob;
+        this.nic = nic;
         this.desin = desin;
         this.type = type;
         this.gen = gen;
@@ -56,6 +60,22 @@ public class Employee {
         this.add = add;
     }
 
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getNic() {
+        return nic;
+    }
+
+    public void setNic(String nic) {
+        this.nic = nic;
+    }
+
     public String getDesin() {
         return desin;
     }
@@ -88,3 +108,4 @@ public class Employee {
         this.edu = edu;
     }
 }
+

@@ -57,7 +57,7 @@ public class EmpHomeWel extends AppCompatActivity {
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EmpHomeWel.this, Add_EmpActivity.class);
+                Intent intent = new Intent(EmpHomeWel.this, list_salary.class);
                 startActivity(intent);
             }
         });
@@ -73,7 +73,7 @@ public class EmpHomeWel extends AppCompatActivity {
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EmpHomeWel.this, Add_EmpActivity.class);
+                Intent intent = new Intent(EmpHomeWel.this, list_salary.class);
                 startActivity(intent);
             }
         });

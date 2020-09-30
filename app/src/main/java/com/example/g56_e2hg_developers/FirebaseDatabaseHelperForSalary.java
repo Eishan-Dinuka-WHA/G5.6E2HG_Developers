@@ -12,35 +12,36 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirebaseDatabaseHelperForEvent{
+public class FirebaseDatabaseHelperForSalary {
 
-    private FirebaseDatabase eDatabase;
-    private DatabaseReference mReferenceEvent;
-    private List<Event> events = new ArrayList<>();
+    private FirebaseDatabase sDatabase;
+    private DatabaseReference sReferenceEvent;
+    private List<Salary> salaries = new ArrayList<>();
 
     public interface DataStatus{
-        void DataIsLoaded(List<Event> events, List<String> keys);
+        void DataIsLoaded(List<Salary> salars, List<String> keys);
         void DataIsInserted();
         void DataIsUpdated();
         void DataIsDeleted();
     }
 
-    public FirebaseDatabaseHelperForEvent() {
-        eDatabase = FirebaseDatabase.getInstance();
-        mReferenceEvent = eDatabase.getReference("events");
+    public FirebaseDatabaseHelperForSalary() {
+        sDatabase = FirebaseDatabase.getInstance();
+        sReferenceEvent = sDatabase.getReference("salary");
     }
-    public void readEvents(final DataStatus dataStatus){
-        mReferenceEvent.addValueEventListener(new ValueEventListener() {
+
+    public void readSalary(final DataStatus dataStatus){
+        sReferenceEvent.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                events.clear();
+                salaries.clear();
                 List<String> keys = new ArrayList<>();
                 for(DataSnapshot keyNode : dataSnapshot.getChildren()){
                     keys.add(keyNode.getKey());
-                    Event event = keyNode.getValue(Event.class);
-                    events.add(event);
+                    Salary salary = keyNode.getValue(Salary.class);
+                    salaries.add(salary);
                 }
-                dataStatus.DataIsLoaded(events,keys);
+                dataStatus.DataIsLoaded(salaries,keys);
             }
 
             @Override
@@ -51,9 +52,9 @@ public class FirebaseDatabaseHelperForEvent{
 
     }
 
-    public void addEvents(Event event, final DataStatus dataStatus){
-        String key = mReferenceEvent.push().getKey();
-        mReferenceEvent.child(key).setValue(event).addOnSuccessListener(new OnSuccessListener<Void>() {
+    public void addSalary(Salary salary, final DataStatus dataStatus){
+        String key = sReferenceEvent.push().getKey();
+        sReferenceEvent.child(key).setValue(salary).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 dataStatus.DataIsInserted();
@@ -61,16 +62,16 @@ public class FirebaseDatabaseHelperForEvent{
         });
     }
 
-    public void UpdateEvents(String key, Event event, final DataStatus dataStatus){
-        mReferenceEvent.child(key).setValue(event).addOnSuccessListener(new OnSuccessListener<Void>() {
+    public void UpdateSalary(String key, Salary salary, final DataStatus dataStatus){
+        sReferenceEvent.child(key).setValue(salary).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 dataStatus.DataIsUpdated();
             }
         });
     }
-    public void DeleteEvents(String key,final DataStatus dataStatus){
-        mReferenceEvent.child(key).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {
+    public void DeleteSalary(String key,final DataStatus dataStatus){
+        sReferenceEvent.child(key).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 dataStatus.DataIsDeleted();

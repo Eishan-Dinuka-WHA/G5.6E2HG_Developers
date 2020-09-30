@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:ems="10"
-        android:hint="@string/E_Full"
+        android:hint="Enter Registration No In Here.."
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
         android:paddingLeft="5dp"
-        android:text="RadioButton"
+        android:text="Present"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -56,7 +56,7 @@
         android:layout_marginStart="41dp"
         android:layout_marginTop="18dp"
         android:paddingRight="5dp"
-        android:text="RadioButton"
+        android:text="Absent"
         app:layout_constraintStart_toEndOf="@+id/radioButton4"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -67,7 +67,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="13dp"
         android:paddingLeft="5dp"
-        android:text="RadioButton"
+        android:text="Half Day"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
 
@@ -78,7 +78,7 @@
         android:layout_marginStart="41dp"
         android:layout_marginTop="13dp"
         android:paddingRight="5dp"
-        android:text="RadioButton"
+        android:text="Holi Day"
         app:layout_constraintStart_toEndOf="@+id/radioButton6"
         app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
 

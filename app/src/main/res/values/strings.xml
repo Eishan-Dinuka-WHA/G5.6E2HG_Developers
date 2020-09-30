@@ -91,4 +91,6 @@
     <string name="evbook">BOOK</string>
     <string name="sign_up">Sign up</string>
     <string name="sign_in">Sign in</string>
+    <string name="nic">NIC</string>
+    <string name="dob">DOB</string>
 </resources>

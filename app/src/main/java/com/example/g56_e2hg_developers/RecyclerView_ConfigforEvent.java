@@ -53,7 +53,8 @@ public class RecyclerView_ConfigforEvent {
             eNop = (TextView) itemView.findViewById(R.id.nop_textView);
             eHprice = (TextView) itemView.findViewById(R.id.hprice_textView);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(
+                    new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(eContext,EventDetailsActivity.class);
