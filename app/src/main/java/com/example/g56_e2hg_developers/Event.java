@@ -11,11 +11,12 @@ public class Event {
     private String htype;
     private String nop;
     private String hprice;
+    private int totalP;
 
     public Event() {
     }
 
-    public Event(String etype, String name, String email, String ename, String nog, String date, String htype, String nop, String hprice) {
+    public Event(String etype, String name, String email, String ename, String nog, String date, String htype, String nop, String hprice, int totalP) {
         this.etype = etype;
         this.name = name;
         this.email = email;
@@ -25,6 +26,7 @@ public class Event {
         this.htype = htype;
         this.nop = nop;
         this.hprice = hprice;
+        this.totalP = totalP;
     }
 
     public String getEtype() {
@@ -97,5 +99,13 @@ public class Event {
 
     public void setHprice(String hprice) {
         this.hprice = hprice;
+    }
+
+    public int getTotalP() {
+        return totalP;
+    }
+
+    public void setTotalP(int totalP) {
+        this.totalP = totalP;
     }
 }

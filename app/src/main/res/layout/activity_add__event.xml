@@ -18,9 +18,27 @@
             android:orientation="vertical"
             android:padding="1dp">
 
+            <TextView
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:fontFamily="@font/bigshot_one"
+                android:hint="Event Booking"
+                android:inputType="text"
+                android:paddingTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:textColorHint="@android:color/holo_red_dark"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+
+            </TextView>
+
             <ImageView
                 android:id="@+id/addreg"
-                android:layout_width="383dp"
+                android:layout_width="match_parent"
                 android:layout_height="235dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="0dp"
@@ -41,31 +59,12 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
-                <TextView
-                    android:id="@+id/view1"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:ems="10"
-                    android:hint="@string/event_type"
-                    android:inputType="text"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="20dp"
-                    android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
-                    android:textColorHint="@color/colorPrimaryDark"
-                    android:textSize="20sp"
-                    android:textStyle="bold">
-
-
-                </TextView>
-
                 <Spinner
-                    android:id="@+id/ett_etype"
+                    android:id="@+id/ett_evtype"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:ems="10"
                     android:entries="@array/Event_catagory"
-                    android:hint="@string/gender"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="20dp"
@@ -99,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@android:color/black">
+                android:textColorHint="@color/colorPrimaryDark">
 
                 <EditText
                     android:id="@+id/ett_email"
@@ -107,11 +106,11 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/e_mail"
-                    android:inputType="text"
+                    android:inputType="textWebEmailAddress|text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_dark_default"
-                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -151,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/number_of_guest"
-                    android:inputType="text"
+                    android:inputType="number|text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
@@ -170,14 +169,14 @@
                 <EditText
                     android:id="@+id/ett_date"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/date"
-                    android:inputType="text"
+                    android:inputType="date"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:textColor="@android:color/background_light"
-                    android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -190,30 +189,12 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/colorPrimaryDark">
 
-                <TextView
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:ems="10"
-                    android:hint="@string/hall_type"
-                    android:inputType="text"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="20dp"
-                    android:paddingRight="30dp"
-                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
-                    android:textColorHint="@color/colorPrimaryDark"
-                    android:textSize="20sp"
-                    android:textStyle="bold">
-
-                </TextView>
-
                 <Spinner
                     android:id="@+id/ett_htype"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:ems="10"
                     android:entries="@array/Hall_Type"
-                    android:hint="@string/gender"
                     android:inputType="text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
@@ -234,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/no_of_plate"
-                    android:inputType="text"
+                    android:inputType="number|text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColorHint="@color/colorPrimaryDark"
@@ -255,7 +236,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/plate_price"
-                    android:inputType="text"
+                    android:inputType="number|text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColorHint="@color/colorPrimaryDark"

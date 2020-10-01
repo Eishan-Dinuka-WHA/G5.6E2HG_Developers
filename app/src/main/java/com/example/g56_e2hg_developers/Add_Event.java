@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -12,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class Add_Event extends AppCompatActivity {
+public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
 
     private Spinner txttype;
     private EditText txtname;
@@ -23,6 +25,9 @@ public class Add_Event extends AppCompatActivity {
     private Spinner txthtype;
     private EditText txtnop;
     private EditText txthprice;
+    private int total;
+
+
 
     private Button mAdd_btn;
     private Button mBack_btn;
@@ -31,7 +36,21 @@ public class Add_Event extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__event);
 
-        txttype = (Spinner) findViewById(R.id.ett_etype);
+        //        change spinner colour ------------------------------------------------------------------------------------------------------
+        Spinner coloredSpinner1 = findViewById(R.id.ett_evtype);
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource( this,R.array.Event_catagory,R.layout.color_spinner_layout);
+        adapter1.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        coloredSpinner1.setAdapter(adapter1);
+        coloredSpinner1.setOnItemSelectedListener(this);
+
+        Spinner coloredSpinner2 = findViewById(R.id.ett_htype);
+        ArrayAdapter adapter2 = ArrayAdapter.createFromResource( this,R.array.Hall_Type,R.layout.color_spinner_layout);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        coloredSpinner2.setAdapter(adapter2);
+        coloredSpinner2.setOnItemSelectedListener(this);
+        //-----------------------------------------------------------------------------------------------------------------------------------
+
+        txttype = (Spinner) findViewById(R.id.ett_evtype);
         txtname = (EditText) findViewById(R.id.ett_name);
         txtemail = (EditText) findViewById(R.id.ett_email);
         txtename = (EditText) findViewById(R.id.ett_ename);
@@ -57,6 +76,8 @@ public class Add_Event extends AppCompatActivity {
                 String nop = txtnop.getText().toString().trim();
                 String price = txthprice.getText().toString().trim();
 
+
+
                 if (TextUtils.isEmpty(name)) {
                     txtname.setError("Enter Name is Required.");
                     return;
@@ -69,22 +90,25 @@ public class Add_Event extends AppCompatActivity {
                     txtename.setError("Event Name is Required.");
                     return;
                 }
-                if (TextUtils.isEmpty(nog)) {
+                else if (TextUtils.isEmpty(nog)) {
                     txtnog.setError("Enter number of guest is Required.");
                     return;
                 }
-                if (TextUtils.isEmpty(date)) {
+                else if (TextUtils.isEmpty(date)) {
                     txtdate.setError("Enter date is Required.");
                     return;
                 }
-                if (TextUtils.isEmpty(nop)) {
+                else if (TextUtils.isEmpty(nop)) {
                     txtdate.setError("Enter Number of Plate is Required.");
                     return;
                 }
-                if (TextUtils.isEmpty(price)) {
+                else if (TextUtils.isEmpty(price)) {
                     txtdate.setError("Enter Plate price is Required.");
                     return;
                 }
+
+                total = Integer.parseInt(txthprice.getText().toString()) * Integer.parseInt(txtnop.getText().toString());
+
 
                 Event event = new Event();
                 event.setEtype(txttype.getSelectedItem().toString());
@@ -96,6 +120,7 @@ public class Add_Event extends AppCompatActivity {
                 event.setHtype(txthtype.getSelectedItem().toString());
                 event.setNop(txtnop.getText().toString());
                 event.setHprice(txthprice.getText().toString());
+                event.setTotalP(total);
 
                 new FirebaseDatabaseHelperForEvent().addEvents(event, new FirebaseDatabaseHelperForEvent.DataStatus() {
                     @Override
@@ -129,5 +154,15 @@ public class Add_Event extends AppCompatActivity {
                 return;
             }
         });
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

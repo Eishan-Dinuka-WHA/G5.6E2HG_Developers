@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+
 import java.util.List;
 
 public class RecyclerView_ConfigforEvent {
@@ -35,6 +37,7 @@ public class RecyclerView_ConfigforEvent {
         private TextView eHtype;
         private TextView eNop;
         private TextView eHprice;
+        private TextView total;
 
         private String key;
 
@@ -52,6 +55,7 @@ public class RecyclerView_ConfigforEvent {
             eHtype = (TextView) itemView.findViewById(R.id.htype_textView);
             eNop = (TextView) itemView.findViewById(R.id.nop_textView);
             eHprice = (TextView) itemView.findViewById(R.id.hprice_textView);
+            total = (TextView) itemView.findViewById(R.id.tprice_textView);
 
             itemView.setOnClickListener(
                     new View.OnClickListener() {
@@ -87,9 +91,11 @@ public class RecyclerView_ConfigforEvent {
             eHtype.setText(event.getHtype());
             eNop.setText(event.getNop());
             eHprice.setText(event.getHprice());
+//            total.setText(event.getTotalP());
             this.key = key;
         }
     }
+
     class EventsAdapter extends RecyclerView.Adapter <EventItemView>{
 
         private List<Event> eEventList;

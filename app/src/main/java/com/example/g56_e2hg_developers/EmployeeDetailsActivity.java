@@ -2,7 +2,9 @@ package com.example.g56_e2hg_developers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -137,6 +139,7 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
         mDelete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 new FirebaseDatabaseHelperForEmployee().DeleteEmployee(key, new FirebaseDatabaseHelperForEmployee.DataStatus() {
                     @Override
                     public void DataIsLoaded(List<Employee> employees, List<String> keys) {
@@ -156,6 +159,15 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
                     @Override
                     public void DataIsDeleted() {
                         Toast.makeText(EmployeeDetailsActivity.this,"Employee record has been Deleted Successfully",Toast.LENGTH_SHORT).show();
+
+                        //Toast Message for reacting to button click
+                        Context context = getApplicationContext();
+                        CharSequence message = "Booking is Deleted";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(context, message, duration);
+                        toast.setGravity(Gravity.BOTTOM | Gravity.CENTER, 0, 0);
+                        toast.show();
+
                         finish();
                         return;
                     }
