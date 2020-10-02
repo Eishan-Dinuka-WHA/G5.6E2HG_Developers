@@ -9,108 +9,176 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="392dp"
-        android:layout_height="258dp"
+        android:layout_width="413dp"
+        android:layout_height="273dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/em7" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="390dp"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="192dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/addat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/em2" />
 
-        <ImageView
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_weight="1"
-            android:paddingRight="5dp"
-            android:paddingLeft="5dp"
-            app:srcCompat="@drawable/em2" />
+    <ImageView
+        android:id="@+id/addlist"
+        android:layout_width="188dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/addatl"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/em1" />
 
-        <ImageView
-            android:id="@+id/addlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            app:srcCompat="@drawable/em1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="392dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/addat"
+        android:layout_width="195dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/sal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/add"
+        app:srcCompat="@drawable/em3" />
 
-        <ImageView
-            android:id="@+id/addat"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:paddingRight="5dp"
-            android:paddingLeft="5dp"
-            android:layout_weight="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/em3" />
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="408dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Add Employee"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/addatl"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:paddingRight="5dp"
-            android:paddingLeft="5dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/em4" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/addatl"
+        android:layout_width="195dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/sall"
+        app:layout_constraintStart_toEndOf="@+id/addat"
+        app:layout_constraintTop_toBottomOf="@+id/addlist"
+        app:srcCompat="@drawable/em4" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="399dp"
-        android:layout_height="150dp"
+    <ImageView
+        android:id="@+id/sal"
+        android:layout_width="195dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addat"
+        app:srcCompat="@drawable/em5" />
+
+    <ImageView
+        android:id="@+id/sall"
+        android:layout_width="195dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sal"
+        app:layout_constraintTop_toBottomOf="@+id/addatl"
+        app:srcCompat="@drawable/em6" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Employee List"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Attendance List"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.986"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 
-        <ImageView
-            android:id="@+id/sal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:paddingRight="5dp"
-            android:paddingLeft="5dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/em5" />
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="565dp"
+        android:layout_marginBottom="53dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Mark Attendance"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
 
-        <ImageView
-            android:id="@+id/sall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:paddingRight="5dp"
-            android:paddingLeft="5dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/em6" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="739dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Salary"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="316dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Salary Slips"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

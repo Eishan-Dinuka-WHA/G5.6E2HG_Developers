@@ -8,17 +8,18 @@
 
     <Button
         android:id="@+id/empmanagebtn"
-        android:layout_width="172dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="611dp"
-        android:background="@android:drawable/button_onoff_indicator_off"
-        android:backgroundTint="@color/cardview_dark_background"
-        android:fontFamily="sans-serif-black"
+        android:layout_width="242dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="656dp"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:backgroundTint="#003d7a"
+        android:fontFamily="monospace"
         android:text="@string/manage"
         android:textColor="@color/cardview_light_background"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

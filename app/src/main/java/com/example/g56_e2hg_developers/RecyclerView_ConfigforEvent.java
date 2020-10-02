@@ -72,6 +72,7 @@ public class RecyclerView_ConfigforEvent {
                     intent.putExtra("htype",eHtype.getText().toString());
                     intent.putExtra("nop",eNop.getText().toString());
                     intent.putExtra("hprice",eHprice.getText().toString());
+                    intent.putExtra("totalP",total.getText().toString());
 
                     eContext.startActivity(intent);
 
@@ -91,7 +92,7 @@ public class RecyclerView_ConfigforEvent {
             eHtype.setText(event.getHtype());
             eNop.setText(event.getNop());
             eHprice.setText(event.getHprice());
-//            total.setText(event.getTotalP());
+//           total.setText(event.getTotalP());
             this.key = key;
         }
     }

@@ -1,20 +1,25 @@
 package com.example.g56_e2hg_developers;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.List;
 
-public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
+public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener {
 
     private Spinner txttype;
     private EditText txtname;
@@ -26,8 +31,6 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
     private EditText txtnop;
     private EditText txthprice;
     private int total;
-
-
 
     private Button mAdd_btn;
     private Button mBack_btn;
@@ -63,9 +66,19 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
         mAdd_btn = (Button) findViewById(R.id.update_btn);
         mBack_btn = (Button) findViewById(R.id.delete_btn);
 
+        txtdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getSupportFragmentManager(), "date_picker");
+            }
+        });
+
         mAdd_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+//-----------------------------------------------------------------------------------------------
 
 
                 String name = txtname.getText().toString().trim();
@@ -108,6 +121,7 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
                 }
 
                 total = Integer.parseInt(txthprice.getText().toString()) * Integer.parseInt(txtnop.getText().toString());
+
 
 
                 Event event = new Event();
@@ -163,6 +177,17 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, month);
+        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        String currentDate = DateFormat.getDateInstance().format(c.getTime());
+        txtdate.setText(currentDate);
 
     }
 }
