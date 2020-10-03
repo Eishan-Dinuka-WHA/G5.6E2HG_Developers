@@ -57,7 +57,7 @@ public class EmpHomeWel extends AppCompatActivity {
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EmpHomeWel.this, list_salary.class);
+                Intent intent = new Intent(EmpHomeWel.this, list_Attendance.class);
                 startActivity(intent);
             }
         });

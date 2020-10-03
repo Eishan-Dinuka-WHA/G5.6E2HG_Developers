@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="?android:attr/listSeparatorTextViewStyle"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTint="#126703">
 
     <TextView
         android:id="@+id/epf_textView"
@@ -119,23 +120,23 @@
         android:id="@+id/ename_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:fontFamily="@font/berkshire_swash"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="108dp"
+        android:fontFamily="sans-serif"
         android:text="TextView"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="56dp"
         android:text="@string/E_Earning"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,9 +146,10 @@
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="256dp"
+        android:layout_marginStart="245dp"
         android:layout_marginTop="56dp"
         android:text="@string/E_Deducion"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -160,6 +162,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="5dp"
         android:text="@string/E_Allowan"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,6 +176,7 @@
         android:layout_marginTop="5dp"
         android:inputType="textMultiLine"
         android:text="@string/E_Total_d"
+        android:textColor="@color/colorPrimary"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -185,6 +189,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="5dp"
         android:text="@string/E_Bonus"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -197,6 +202,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="5dp"
         android:text="OT Work"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -209,6 +215,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="25dp"
         android:text="@string/E_Basic_salary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -218,49 +225,53 @@
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="25dp"
         android:text="Fes Advance"
+        android:textColor="#AA3434"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/basic_textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="5dp"
-        android:text="@string/E_sta"
+        android:text="@string/stamp"
+        android:textColor="#AA3434"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/over_textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
     <TextView
         android:id="@+id/textView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="28dp"
         android:inputType="textMultiLine"
         android:text="Total Earning"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/deduction_textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="5dp"
-        android:text="@string/E_Epf"
+        android:text="@string/loan"
+        android:textColor="#AA3434"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/allown_textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
     <TextView
@@ -268,7 +279,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:text="Total Pay"
+        android:text="Total Pay :-"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView41"
@@ -287,5 +299,14 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="67dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

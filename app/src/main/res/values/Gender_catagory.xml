@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Gender_catagory">
-        <item >--Select Gender Here--</item>
+        <item >-- Select Gender Here --</item>
         <item>Male</item>
         <item>Female</item>
 </string-array>
     <string-array name="Employee_type">
-        <item >--Select Employee Type Here</item>
+        <item >-- Select Employee Type Here --</item>
         <item>Permanent Empolyee </item>
         <item>Temporary Employee</item>
     </string-array>
     <string-array name="Employee_desig">
-        <item >--Select Designation Here</item>
+        <item >-- Select Designation Here --</item>
         <item>Chef</item>
         <item>Waiter</item>
         <item>HR Manager</item>
@@ -19,10 +19,18 @@
         <item>Receptionist</item>
     </string-array>
     <string-array name="Employee_edu">
-        <item>--Select Qualification</item>
+        <item>-- Select Qualification --</item>
         <item>G.C.E.(O/L)</item>
         <item>G.C.E.(A/L)</item>
         <item>Diploma Holder</item>
         <item>Degree Holder</item>
+    </string-array>
+
+    <string-array name="Attendance_edu">
+        <item>--Select In Here --</item>
+        <item>Present</item>
+        <item>Absent</item>
+        <item>Half Day</item>
+        <item>Holi Day</item>
     </string-array>
 </resources>

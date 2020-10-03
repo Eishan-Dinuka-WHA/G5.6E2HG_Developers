@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SalaryDetailsActivity">
+    android:background="#C5B2B2"
+    tools:context=".Add_Salary">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,8 +49,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textSize="30sp"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textStyle="bold"></TextView>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +76,8 @@
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -93,11 +94,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/E_Basic_salary"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -113,11 +115,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/E_over_time"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -133,11 +136,12 @@
                     android:layout_height="59dp"
                     android:ems="10"
                     android:hint="@string/E_Allowan"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -153,11 +157,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/E_Bonus"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -193,11 +198,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Fastival Advance"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -213,11 +219,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="STAMP"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -232,12 +239,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/E_Epf"
-                    android:inputType="text"
+                    android:hint="Loan"
+                    android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -252,10 +260,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@android:drawable/progress_horizontal"
-                    android:backgroundTint="?android:attr/colorPressedHighlight"
+                    android:backgroundTint="?android:attr/colorFocusedHighlight"
                     android:fontFamily="@font/berkshire_swash"
                     android:paddingLeft="2dp"
-                    android:text="@string/Update" />
+                    android:text="@string/Update"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/Del"
@@ -264,9 +275,12 @@
                     android:layout_weight="1"
                     android:background="@android:drawable/progress_horizontal"
                     android:backgroundTint="@android:color/holo_red_dark"
-                    android:fontFamily="@font/berkshire_swash"
+                    android:fontFamily="@font/abril_fatface"
                     android:paddingRight="2dp"
-                    android:text="@string/delete" />
+                    android:text="@string/E_delete"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 

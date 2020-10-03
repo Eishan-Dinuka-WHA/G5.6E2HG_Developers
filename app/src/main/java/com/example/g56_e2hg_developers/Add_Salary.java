@@ -59,7 +59,7 @@ public class Add_Salary extends AppCompatActivity {
 
                 new FirebaseDatabaseHelperForSalary().addSalary(salary, new FirebaseDatabaseHelperForSalary.DataStatus() {
                     @Override
-                    public void DataIsLoaded(List<Salary> salars, List<String> keys) {
+                    public void DataIsLoaded(List<Salary> salarsz, List<String> keys) {
 
                     }
 

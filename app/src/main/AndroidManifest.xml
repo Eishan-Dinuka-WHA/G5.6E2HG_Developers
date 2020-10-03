@@ -8,6 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".list_Attendance"></activity>
         <activity android:name=".list_salary" />
         <activity android:name=".res_menu_home" />
         <activity android:name=".SalaryDetailsActivity" />

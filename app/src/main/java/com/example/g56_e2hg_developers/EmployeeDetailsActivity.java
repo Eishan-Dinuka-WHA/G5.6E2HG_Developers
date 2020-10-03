@@ -53,6 +53,24 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
         coloredSpinner.setAdapter(adapter);
         coloredSpinner.setOnItemSelectedListener(this);
+
+        Spinner coloredSpinner2 = findViewById(R.id.ett_des);
+        ArrayAdapter adapter2 = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        coloredSpinner2.setAdapter(adapter2);
+        coloredSpinner2.setOnItemSelectedListener(this);
+
+        Spinner coloredSpinner3 = findViewById(R.id.ett_eetype);
+        ArrayAdapter adapter3 = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
+        adapter3.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        coloredSpinner3.setAdapter(adapter3);
+
+        coloredSpinner.setOnItemSelectedListener(this);
+        Spinner coloredSpinner4 = findViewById(R.id.ett_edu);
+        ArrayAdapter adapter4 = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
+        adapter4.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        coloredSpinner4.setAdapter(adapter4);
+        coloredSpinner4.setOnItemSelectedListener(this);
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -93,8 +111,8 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
         txtedu = (Spinner) findViewById(R.id.ett_edu);
         txtedu.setSelection(getIndex_spinnerItem(txtedu, edu));
 
-        mUpdate_btn = (Button) findViewById(R.id.update_btn);
-        mDelete_btn = (Button) findViewById(R.id.delete_btn);
+        mUpdate_btn = (Button) findViewById(R.id.up_btn);
+        mDelete_btn = (Button) findViewById(R.id.del_btn);
 
         mUpdate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,7 +207,7 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
     }
 
     @Override

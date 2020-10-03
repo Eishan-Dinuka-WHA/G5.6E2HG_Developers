@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/empb"
+    android:background="#D8BFD8"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".EmployeeDetailsActivity">
@@ -28,6 +28,17 @@
                 android:paddingBottom="0dp"
                 app:srcCompat="@drawable/em2" />
 
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="30dp"
+                android:text="@string/E_Registraion"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,13 +58,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/E_Registraion"
                     android:inputType="number"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:text="Auto Genarated"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -81,7 +92,8 @@
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -97,11 +109,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/moblile_no"
-                    android:inputType="text"
+                    android:inputType="phone"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -117,11 +130,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/E_Address"
-                    android:inputType="text"
+                    android:inputType="textPostalAddress"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -137,11 +151,12 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/dob"
-                    android:inputType="text"
+                    android:inputType="date"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -162,7 +177,8 @@
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -171,6 +187,17 @@
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="@string/E_Designation"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/ett_des"
@@ -188,6 +215,17 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="@string/E_Emp_Type"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <Spinner
                     android:id="@+id/ett_eetype"
                     android:layout_width="match_parent"
@@ -202,7 +240,7 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textColorHint="@color/design_default_color_primary_dark"/>
+                android:textColorHint="@color/design_default_color_primary_dark" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -210,6 +248,17 @@
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="@string/gender"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/ett_gens"
@@ -232,6 +281,17 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/design_default_color_primary_dark">
 
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="@string/education_details"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <Spinner
                     android:id="@+id/ett_edu"
                     android:layout_width="match_parent"
@@ -248,24 +308,30 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/update_btn"
+                    android:id="@+id/up_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="?android:attr/colorEdgeEffect"
-                    android:fontFamily="@font/berkshire_swash"
+                    android:backgroundTint="?attr/colorError"
+                    android:fontFamily="@font/abril_fatface"
                     android:paddingTop="10dp"
-                    android:text="@string/submit" />
+                    android:text="@string/Updatess"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/delete_btn"
+                    android:id="@+id/del_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/holo_green_dark"
-                    android:fontFamily="@font/berkshire_swash"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:fontFamily="@font/abril_fatface"
                     android:paddingTop="10dp"
-                    android:text="@string/back" />
+                    android:text="@string/delete"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

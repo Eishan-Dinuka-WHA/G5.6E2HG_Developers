@@ -1,105 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddAttendance">
+    android:background="@color/cardview_light_background"
+    tools:context=".Add_Salary">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="403dp"
-        android:layout_height="256dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/em3" />
-
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="348dp"
-        android:layout_height="313dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:ems="10"
-        android:hint="Enter Registration No In Here.."
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+        android:layout_height="match_parent"
+        android:background="#917D7D">
 
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="168dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
-        android:paddingLeft="5dp"
-        android:text="Present"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="1dp">
 
-    <RadioButton
-        android:id="@+id/radioButton5"
-        android:layout_width="168dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="18dp"
-        android:paddingRight="5dp"
-        android:text="Absent"
-        app:layout_constraintStart_toEndOf="@+id/radioButton4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            <ImageView
+                android:id="@+id/addreg"
+                android:layout_width="393dp"
+                android:layout_height="251dp"
+                android:paddingBottom="0dp"
+                app:srcCompat="@drawable/em3" />
 
-    <RadioButton
-        android:id="@+id/radioButton6"
-        android:layout_width="168dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="13dp"
-        android:paddingLeft="5dp"
-        android:text="Half Day"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+            <TextView
+                android:id="@+id/textView144"
+                android:layout_width="393dp"
+                android:layout_height="49dp"
+                android:layout_weight="1" />
 
-    <RadioButton
-        android:id="@+id/radioButton7"
-        android:layout_width="168dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="13dp"
-        android:paddingRight="5dp"
-        android:text="Holi Day"
-        app:layout_constraintStart_toEndOf="@+id/radioButton6"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark" />
 
-    <Button
-        android:id="@+id/mark"
-        android:layout_width="172dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:drawable/button_onoff_indicator_off"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:fontFamily="sans-serif-thin"
-        android:paddingLeft="2dp"
-        android:paddingRight="2dp"
-        android:text="Mark Attendance"
-        android:textColor="@color/cardview_light_background"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton6" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark">
+
+                <EditText
+                    android:id="@+id/ett_addempno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Enter Name Here"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark">
+
+                <EditText
+                    android:id="@+id/ett_adate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Enter Date Here "
+                    android:inputType="date"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="40dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark">
+
+                <TextView
+                    android:id="@+id/textView200"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="Select Your Attendance"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <Spinner
+                    android:id="@+id/ett_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:ems="10"
+                    android:entries="@array/Attendance_edu"
+                    android:hint="@string/gender"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="24sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="393dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="80dp">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/button_onoff_indicator_on"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:fontFamily="@font/aclonica"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="Mark"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/button_onoff_indicator_on"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:fontFamily="@font/aclonica"
+                    android:paddingLeft="5dp"
+                    android:text="@string/back"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,24 +1,29 @@
 package com.example.g56_e2hg_developers;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
 
-public class Add_EmpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Add_EmpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener  {
 
     private EditText txtID;
     private EditText txtFname;
@@ -80,6 +85,14 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
 
         mAdd_btn = (Button) findViewById(R.id.sub_btn);
         mBack_btn = (Button) findViewById(R.id.back_btn);
+
+        txtdob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getSupportFragmentManager(), "date_picker");
+            }
+        });
 
         mAdd_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,4 +191,14 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
     {
     }
 //----------------------------------------------------------------------------------------------------------
+@Override
+public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+    Calendar c = Calendar.getInstance();
+    c.set(Calendar.YEAR, year);
+    c.set(Calendar.MONTH, month);
+    c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+    String currentDate = DateFormat.getDateInstance().format(c.getTime());
+    txtdob.setText(currentDate);
+
+}
 }
