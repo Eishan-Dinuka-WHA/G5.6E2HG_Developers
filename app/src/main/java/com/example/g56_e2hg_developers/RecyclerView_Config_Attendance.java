@@ -47,7 +47,7 @@ public class RecyclerView_Config_Attendance {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext,EmployeeDetailsActivity.class);
+                    Intent intent = new Intent(mContext,AddAttendance.class);
                     intent.putExtra("key",key);
                     intent.putExtra("name",name.getText().toString());
                     intent.putExtra("date",date.getText().toString());
