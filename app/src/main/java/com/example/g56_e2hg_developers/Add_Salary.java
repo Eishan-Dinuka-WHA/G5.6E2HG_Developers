@@ -3,6 +3,7 @@ package com.example.g56_e2hg_developers;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +47,50 @@ public class Add_Salary extends AppCompatActivity {
         sAddbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String name = txtsname.getText().toString().trim();
+                String bas = txtbas.getText().toString().trim();
+                String over = txtover.getText().toString().trim();
+                String allow = txtallow.getText().toString().trim();
+                String bonus = txtbonus.getText().toString().trim();
+                String fest = txtfest.getText().toString().trim();
+                String stamp = txtstamp.getText().toString().trim();
+                String epf = txtepf.getText().toString().trim();
+
+
+                if (TextUtils.isEmpty(name)) {
+                    txtsname.setError("Enter Name is Required.");
+                    return;
+                }
+                else if (TextUtils.isEmpty(bas)) {
+                    txtbas.setError("Enter Basic Salary");
+                    return;
+                }
+                else if (TextUtils.isEmpty(over)) {
+                    txtover.setError("Enter over time ");
+                    return;
+                }
+                else if (TextUtils.isEmpty(allow)) {
+                    txtallow.setError("Enter allowance Salary");
+                    return;
+                }
+                else if (TextUtils.isEmpty(bonus)) {
+                    txtbonus.setError("Enter Bonus Salary");
+                    return;
+                }
+                else if (TextUtils.isEmpty(fest)) {
+                    txtfest.setError("Enter Fest Advance Salary");
+                    return;
+                }
+                else if (TextUtils.isEmpty(stamp)) {
+                    txtstamp.setError("Enter stamp");
+                    return;
+                }
+                else if (TextUtils.isEmpty(epf)) {
+                    txtepf.setError("Enter loan");
+                    return;
+                }
+
 
                 Salary salary = new Salary();
                 salary.setEname(txtsname.getText().toString());

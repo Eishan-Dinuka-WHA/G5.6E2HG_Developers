@@ -114,16 +114,21 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
                     txtmob.setError("Enter valid mobile number");
                     return;
                 }
+                if (mobile.length() < 10) {
+                    txtmob.setError("Enter corrate mobile");
+                    return;
+                }
+
                 else if (TextUtils.isEmpty(add)) {
                     txtadd.setError("Enter Address is Required.");
                     return;
                 }
-                else if (TextUtils.isEmpty(nic)) {
-                    txtadd.setError("Enter Valid NIC is Required.");
+                else if (nic.length() < 11) {
+                    txtnic.setError("Enter Valid NIC is Required.");
                     return;
                 }
                 else if (TextUtils.isEmpty(dob)) {
-                    txtadd.setError("Enter DOB is Required.");
+                    txtdob.setError("Enter DOB is Required.");
                     return;
                 }
 
