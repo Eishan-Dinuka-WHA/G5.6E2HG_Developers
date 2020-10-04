@@ -103,4 +103,33 @@
     <string name="g_arrival">Arrival Date</string>
     <string name="g_departure">Departure Date</string>
     <string name="g_edit">Edit</string>
+    <string name="res_cus_nane">Customer Name</string>
+    <string name="res_con_no">Contact No</string>
+    <string name="res_e_mail">E-mail</string>
+    <string name="res_house_no">House No</string>
+    <string name="res_street">Street</string>
+    <string name="res_city">City</string>
+    <string name="res_chicken">Chicken Sausage Meat </string>
+    <string name="res_super">Super Supreme Pizza</string>
+    <string name="res_prawn">Prawn with Chicken Bacon </string>
+    <string name="res_hot">Hot Butter Cuttlefish </string>
+    <string name="res_redbean">Red Bean Rice</string>
+    <string name="res_mix">Chicken Mix Rice</string>
+    <string name="res_lankan">Sri Lankan Rice</string>
+    <string name="res_pizza">Pizza</string>
+    <string name="res_rice">Rice</string>
+    <string name="res_medium">Medium Value pizza - LKR500.00</string>
+    <string name="res_large">Large Value Pizza - LKR800.00</string>
+    <string name="res_mediumm">Large Value Rice - LKR800.00</string>
+    <string name="res_largee">Medium Value Rice - LKR500.00</string>
+    <string name="res_plserve">Large Serves 4 Adults</string>
+    <string name="res_rlserve">Large Serves 2 Adults</string>
+    <string name="res_pmserve">Medium Serves 2 Adults</string>
+    <string name="res_rmserve">Medium Serves 1 Adult</string>
+    <string name="res_meal">Select Your Meal</string>
+    <string name="res_size">Select Portion Size</string>
+    <string name="res_location">Enter Your Delivery Location</string>
+    <string name="res_qty">Quantity</string>
+    <string name="res_detl">Enter Your Details</string>
+
 </resources>

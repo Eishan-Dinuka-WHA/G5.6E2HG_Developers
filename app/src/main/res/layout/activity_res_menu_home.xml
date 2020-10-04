@@ -21,40 +21,25 @@
             <ImageView
                 android:id="@+id/re1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:paddingBottom="10dp"
+                android:layout_height="220dp"
+                android:paddingBottom="5dp"
                 app:srcCompat="@drawable/rmain" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/re2"
                 android:layout_width="match_parent"
-                android:layout_height="272dp"
-                android:paddingBottom="4dp"
+                android:layout_height="286dp"
+                android:paddingBottom="5dp"
                 app:srcCompat="@drawable/r7" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/re3"
                 android:layout_width="match_parent"
-                android:layout_height="272dp"
-                app:srcCompat="@drawable/r2" />
+                android:layout_height="290dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/r3" />
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="match_parent"
-                android:layout_height="272dp"
-                app:srcCompat="@drawable/r4" />
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="match_parent"
-                android:layout_height="272dp"
-                app:srcCompat="@drawable/r7" />
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="match_parent"
-                android:layout_height="272dp"
-                app:srcCompat="@drawable/r9" />
 
         </LinearLayout>
 

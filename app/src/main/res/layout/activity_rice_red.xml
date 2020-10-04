@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/resbgrounf"
+    tools:context=".RiceLankan">
+
+
+    <TextView
+        android:id="@+id/tex11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/aclonica"
+        android:paddingTop="20dp"
+        android:text="@string/res_redbean"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imag4"
+        android:layout_width="wrap_content"
+        android:layout_height="246dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex11"
+        app:srcCompat="@drawable/redmeal" />
+
+    <TextView
+        android:id="@+id/tex16"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/res_largee"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imag4" />
+
+    <TextView
+        android:id="@+id/tex27"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/res_rlserve"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex19" />
+
+    <TextView
+        android:id="@+id/tex18"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/res_rmserve"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex16" />
+
+    <TextView
+        android:id="@+id/tex19"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/res_mediumm"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex18" />
+
+    <Button
+        android:id="@+id/butt2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Order"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tex27" />
+
+    <Button
+        android:id="@+id/butt3"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Back"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
