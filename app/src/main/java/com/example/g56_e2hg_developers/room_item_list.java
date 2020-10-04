@@ -8,21 +8,21 @@ import android.view.View;
 
 import java.util.List;
 
-public class List_Employee extends AppCompatActivity {
+public class room_item_list extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list__employee);
+        setContentView(R.layout.activity_room_item_list);
 
-        mRecyclerView =(RecyclerView) findViewById(R.id.recyclerview_employees);
-        new FirebaseDatabaseHelperForEmployee().readEmployee(new FirebaseDatabaseHelperForEmployee.DataStatus() {
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycleview_for_room);
+        new FirebaseDatabaseHelperForRoom().readRooms(new FirebaseDatabaseHelperForRoom.DataStatus() {
             @Override
-            public void DataIsLoaded(List<Employee> employees, List<String> keys) {
-                findViewById(R.id.progressBar_employee).setVisibility(View.GONE);
-                new RecyclerView_Config().setConfig(mRecyclerView,List_Employee.this,employees,keys);
+            public void DataIsLoaded(List<Room> rooms, List<String> keys) {
+                findViewById(R.id.progressBarrrr).setVisibility(View.GONE);
+                new RecycleView_ConfigRoom().setConfig(mRecyclerView,room_item_list.this,rooms,keys);
             }
 
             @Override

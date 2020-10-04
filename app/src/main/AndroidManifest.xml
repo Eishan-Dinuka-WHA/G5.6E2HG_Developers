@@ -24,6 +24,10 @@
         <activity android:name=".EmployeeDetailsActivity" />
         <activity android:name=".List_Employee" />
         <activity android:name=".Add_EmpActivity" />
+        <activity android:name=".activity_room_res"/>
+        <activity android:name=".activity_add_room_res"/>
+        <activity android:name=".room_item_list"/>
+        <activity android:name=".RoomDetailsActivity"/>-
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

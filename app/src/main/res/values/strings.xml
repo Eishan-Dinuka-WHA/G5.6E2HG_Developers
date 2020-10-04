@@ -96,4 +96,11 @@
     <string name="loan">Loan</string>
     <string name="fastival_advance">Fastival Advance</string>
     <string name="employee_name">Employee Name</string>
+    <string name="g_name">Name</string>
+    <string name="g_email">Email</string>
+    <string name="g_roomtype">Room Type</string>
+    <string name="g_guests">Guests</string>
+    <string name="g_arrival">Arrival Date</string>
+    <string name="g_departure">Departure Date</string>
+    <string name="g_edit">Edit</string>
 </resources>
