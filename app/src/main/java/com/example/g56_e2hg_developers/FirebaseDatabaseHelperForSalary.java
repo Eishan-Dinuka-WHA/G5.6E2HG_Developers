@@ -18,6 +18,7 @@ public class FirebaseDatabaseHelperForSalary {
     private DatabaseReference sReferenceEvent;
     private List<Salary> salaries = new ArrayList<>();
 
+
     public interface DataStatus{
         void DataIsLoaded(List<Salary> salars, List<String> keys);
         void DataIsInserted();

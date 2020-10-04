@@ -45,11 +45,22 @@
                 android:paddingBottom="0dp"
                 app:srcCompat="@drawable/e4" />
 
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="@string/event_catagorey"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
+                android:paddingLeft="30dp"
                 android:textColorHint="@color/design_default_color_primary_dark" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -166,6 +177,17 @@
                 android:focusableInTouchMode="true"
                 android:textColorHint="@color/colorPrimaryDark">
 
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="@string/hall_type"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
                 <EditText
                     android:id="@+id/ett_date"
                     android:layout_width="match_parent"
@@ -179,6 +201,7 @@
                     android:paddingRight="30dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -239,6 +262,7 @@
                     android:inputType="number|text"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
+                    android:paddingBottom="50dp"
                     android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="20sp"
                     android:textStyle="bold" />

@@ -10,14 +10,15 @@ public class Salary {
     private String fest;
     private String stamp;
     private String epf;
-    private String earning;
-    private String deducation;
-    private String total;
+    private int tearning;
+    private int tdeducation;
+    private int totalp;
+    private float calepf;
 
     public Salary() {
     }
 
-    public Salary(String ename, String bas, String over, String allow, String bonus, String fest, String stamp, String epf, String earning, String deducation, String total) {
+    public Salary(String ename, String bas, String over, String allow, String bonus, String fest, String stamp, String epf, int tearning, int tdeducation, int totalp, int calepf) {
         this.ename = ename;
         this.bas = bas;
         this.over = over;
@@ -26,9 +27,10 @@ public class Salary {
         this.fest = fest;
         this.stamp = stamp;
         this.epf = epf;
-        this.earning = earning;
-        this.deducation = deducation;
-        this.total = total;
+        this.tearning = tearning;
+        this.tdeducation = tdeducation;
+        this.totalp = totalp;
+        this.calepf = calepf;
     }
 
     public String getEname() {
@@ -95,28 +97,35 @@ public class Salary {
         this.epf = epf;
     }
 
-    public String getEarning() {
-        return earning;
+    public int getTearning() {
+        return tearning;
     }
 
-    public void setEarning(String earning) {
-        this.earning = earning;
+    public void setTearning(int tearning) {
+        this.tearning = tearning;
     }
 
-    public String getDeducation() {
-        return deducation;
+    public int getTdeducation() {
+        return tdeducation;
     }
 
-    public void setDeducation(String deducation) {
-        this.deducation = deducation;
+    public void setTdeducation(int tdeducation) {
+        this.tdeducation = tdeducation;
     }
 
-    public String getTotal() {
-        return total;
+    public int getTotalp() {
+        return totalp;
     }
 
-    public void setTotal(String total) {
-        this.total = total;
+    public void setTotalp(int totalp) {
+        this.totalp = totalp;
+    }
+
+    public float getCalepf() {
+        return calepf;
+    }
+
+    public void setCalepf(float calepf) {
+        this.calepf = calepf;
     }
 }
-

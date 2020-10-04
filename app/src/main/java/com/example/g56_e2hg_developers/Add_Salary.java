@@ -22,6 +22,10 @@ public class Add_Salary extends AppCompatActivity {
     private EditText txtfest;
     private EditText txtstamp;
     private EditText txtepf;
+    private int tdeducation;
+    private int tarning;
+    private int totalp;
+    private float calepf;
 
     private Button sAddbutton;
     private Button sBack_btn;
@@ -91,6 +95,13 @@ public class Add_Salary extends AppCompatActivity {
                     return;
                 }
 
+                tarning = Integer.parseInt(txtbas.getText().toString()) + Integer.parseInt(txtover.getText().toString())+Integer.parseInt(txtallow.getText().toString())+Integer.parseInt(txtbonus.getText().toString());
+                tdeducation =  Integer.parseInt(txtfest.getText().toString()) + Integer.parseInt(txtstamp.getText().toString())+Integer.parseInt(txtepf.getText().toString());
+                //calepf = Integer.parseInt(txtbas.getText().toString())*(10/100.0f);
+                totalp= tarning-tdeducation;
+
+
+
 
                 Salary salary = new Salary();
                 salary.setEname(txtsname.getText().toString());
@@ -101,10 +112,13 @@ public class Add_Salary extends AppCompatActivity {
                 salary.setFest(txtfest.getText().toString());
                 salary.setStamp(txtstamp.getText().toString());
                 salary.setEpf(txtepf.getText().toString());
+                salary.setTearning(tarning);
+                salary.setTdeducation(tdeducation);
+                salary.setTotalp(totalp);
 
                 new FirebaseDatabaseHelperForSalary().addSalary(salary, new FirebaseDatabaseHelperForSalary.DataStatus() {
                     @Override
-                    public void DataIsLoaded(List<Salary> salarsz, List<String> keys) {
+                    public void DataIsLoaded(List<Salary> salary, List<String> keys) {
 
                     }
 
@@ -124,6 +138,7 @@ public class Add_Salary extends AppCompatActivity {
                     public void DataIsDeleted() {
 
                     }
+
                 });
 
             }

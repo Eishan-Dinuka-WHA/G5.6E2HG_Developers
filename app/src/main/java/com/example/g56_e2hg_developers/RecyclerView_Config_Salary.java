@@ -17,6 +17,7 @@ public class RecyclerView_Config_Salary {
 
     private Context sContext;
     private  salaryAdapter sSalaryAdapter;
+    private static final String TAG = " Recyclerview_ConfigforE";
 
     public void setConfig(RecyclerView recyclerView, Context context, List<Salary> salaries, List<String> keys){
         sContext = context;
@@ -36,6 +37,10 @@ public class RecyclerView_Config_Salary {
         private TextView eestamp;
         private TextView eeepf;
         private String key;
+        private TextView Tduction;
+        private TextView earning;
+        private TextView netpay;
+
 
         public SalaryItemView(ViewGroup parent) {
 
@@ -50,6 +55,9 @@ public class RecyclerView_Config_Salary {
             eefestival = (TextView) itemView.findViewById(R.id.festival_textView);
             eestamp = (TextView) itemView.findViewById(R.id.stamp_textView);
             eeepf = (TextView) itemView.findViewById(R.id.epf_textView);
+            Tduction = (TextView) itemView.findViewById(R.id.earning_textView);
+            earning = (TextView) itemView.findViewById(R.id.deduction_textView);
+            netpay = (TextView) itemView.findViewById(R.id.textView41);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -64,6 +72,9 @@ public class RecyclerView_Config_Salary {
                     intent.putExtra("fest",eefestival.getText().toString());
                     intent.putExtra("stamp",eestamp.getText().toString());
                     intent.putExtra("epf",eeepf.getText().toString());
+                    intent.putExtra("tdeducation",Tduction.getText().toString());
+                    intent.putExtra("tearning",earning.getText().toString());
+                    intent.putExtra("totalp",netpay.getText().toString());
 
                     sContext.startActivity(intent);
 
@@ -82,6 +93,10 @@ public class RecyclerView_Config_Salary {
             eefestival.setText(salary.getFest());
             eestamp.setText(salary.getStamp());
             eeepf.setText(salary.getEpf());
+            Tduction.setText(String.valueOf(salary.getTdeducation()));
+            earning.setText(String.valueOf(salary.getTearning()));
+            netpay.setText(String.valueOf(salary.getTotalp()));
+
             this.key = key;
         }
     }

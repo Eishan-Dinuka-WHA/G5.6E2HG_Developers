@@ -172,7 +172,6 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
                 });
 
 
-
             }
         });
 

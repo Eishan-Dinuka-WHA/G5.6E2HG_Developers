@@ -18,6 +18,7 @@ import java.util.List;
 public class RecyclerView_ConfigforEvent {
     private Context eContext;
     private EventsAdapter eEventAdapter;
+    private static final String TAG = " Recyclerview_ConfigforE";
 
     public void setConfig(RecyclerView recyclerView, Context context, List<Event> events, List<String> keys){
         eContext = context;
@@ -55,6 +56,7 @@ public class RecyclerView_ConfigforEvent {
             eHtype = (TextView) itemView.findViewById(R.id.htype_textView);
             eNop = (TextView) itemView.findViewById(R.id.nop_textView);
             eHprice = (TextView) itemView.findViewById(R.id.hprice_textView);
+
             total = (TextView) itemView.findViewById(R.id.tprice_textView);
 
             itemView.setOnClickListener(
@@ -92,7 +94,7 @@ public class RecyclerView_ConfigforEvent {
             eHtype.setText(event.getHtype());
             eNop.setText(event.getNop());
             eHprice.setText(event.getHprice());
-//           total.setText(event.getTotalP());
+            total.setText(String.valueOf(event.getTotalP()));
             this.key = key;
         }
     }
