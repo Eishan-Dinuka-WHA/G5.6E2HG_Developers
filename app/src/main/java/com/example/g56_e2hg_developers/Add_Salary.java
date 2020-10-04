@@ -152,4 +152,14 @@ public class Add_Salary extends AppCompatActivity {
             }
         });
     }
+    public static int calcear( int basic, int overtime, int allownce  ){
+        int val;
+        val = basic+overtime+allownce;
+        return val;
+    }
+
+    public float newTest(float one, float two, float three){
+        return one+two+three;
+
+    }
 }

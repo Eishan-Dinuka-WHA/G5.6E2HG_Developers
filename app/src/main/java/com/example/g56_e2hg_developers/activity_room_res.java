@@ -48,6 +48,5 @@ public class activity_room_res extends AppCompatActivity {
             }
         });
 
-
     }
 }

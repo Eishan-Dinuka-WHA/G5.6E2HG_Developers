@@ -24,7 +24,7 @@ public class ResFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),pizzaOne.class);
+                Intent intent = new Intent(getActivity(),res_menu_home.class);
                 startActivity(intent);
             }
         });
