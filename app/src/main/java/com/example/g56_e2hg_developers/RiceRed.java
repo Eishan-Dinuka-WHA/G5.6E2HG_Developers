@@ -9,7 +9,8 @@ import android.widget.Button;
 
 public class RiceRed extends AppCompatActivity {
 
-    private Button sign_in;
+    private Button ORDER;
+    private Button BACK;
 
 
     @Override
@@ -17,12 +18,22 @@ public class RiceRed extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rice_red);
 
-        sign_in = findViewById(R.id.butt2);
-        sign_in.setOnClickListener(new View.OnClickListener() {
+        ORDER = findViewById(R.id.butt2);
+        BACK  = findViewById(R.id.butt3);
+
+        ORDER.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RiceRed.this,pizzaOne.class);
                 startActivity(intent);
+            }
+        });
+
+        BACK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                return;
             }
         });
 

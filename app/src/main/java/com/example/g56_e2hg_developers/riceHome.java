@@ -36,7 +36,7 @@ public class riceHome extends AppCompatActivity {
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(riceHome.this,pizzaOne.class);
+                Intent intent = new Intent(riceHome.this,RiceChkn.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class riceHome extends AppCompatActivity {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(riceHome.this, pizzaOne.class);
+                Intent intent = new Intent(riceHome.this,RiceLankan.class);
                 startActivity(intent);
             }
         });

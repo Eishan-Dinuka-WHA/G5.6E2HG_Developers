@@ -9,21 +9,33 @@ import android.widget.Button;
 
 public class PizzaChicken extends AppCompatActivity {
 
+    private Button ORDER;
+    private Button BACK;
 
-    private Button book;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pizza_chicken);
 
-        book = findViewById(R.id.button21);
-        book.setOnClickListener(new View.OnClickListener() {
+        ORDER = findViewById(R.id.button21);
+        BACK  = findViewById(R.id.button31);
+
+        ORDER.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PizzaChicken.this,pizzaOne.class);
                 startActivity(intent);
             }
         });
+
+        BACK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                return;
+            }
+        });
+
     }
 }

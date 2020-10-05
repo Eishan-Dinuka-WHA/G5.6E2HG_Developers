@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResDetailsActvitity"></activity>
+        <activity android:name=".ResDetailsActvitity"/>
         <activity android:name=".ResturantListActivity" />
         <activity android:name=".RiceLankan" />
         <activity android:name=".RiceChkn" />
@@ -21,9 +21,8 @@
         <activity android:name=".pizzaOne" />
         <activity android:name=".pizzaHome" />
         <activity android:name=".res_menu_home" />
-        <activity android:name=".list_Attendance"></activity>
+        <activity android:name=".list_Attendance"/>
         <activity android:name=".list_salary" />
-        <activity android:name=".res_menu_home" />
         <activity android:name=".SalaryDetailsActivity" />
         <activity android:name=".Add_Salary" />
         <activity android:name=".AddAttendance" />
@@ -40,7 +39,7 @@
         <activity android:name=".activity_room_res"/>
         <activity android:name=".activity_add_room_res"/>
         <activity android:name=".room_item_list"/>
-        <activity android:name=".RoomDetailsActivity"/>-
+        <activity android:name=".RoomDetailsActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
