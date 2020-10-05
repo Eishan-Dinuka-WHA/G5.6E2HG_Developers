@@ -5,7 +5,8 @@
     style="?android:attr/listSeparatorTextViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/colorPrimary">
+    android:background="#C8BEBE"
+    android:backgroundTint="#E4D0D0">
 
     <TextView
         android:id="@+id/reg_textView"
@@ -59,6 +60,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:background="@color/cardview_light_background"
+        android:backgroundTint="#E4D0D0"
         android:paddingEnd="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

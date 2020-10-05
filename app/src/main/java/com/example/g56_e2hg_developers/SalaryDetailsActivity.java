@@ -36,6 +36,12 @@ public class SalaryDetailsActivity extends AppCompatActivity {
     private String fest;
     private String stamp;
     private String epf;
+    private Double tdeducation;
+    private Double tarning;
+    private Double totalp;
+    private Double calepf;
+    private Double calepf1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +82,16 @@ public class SalaryDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                tarning =  Double.parseDouble(txtbas.getText().toString()) +  Double.parseDouble(txtover.getText().toString())+ Double.parseDouble(txtallow.getText().toString())+ Double.parseDouble(txtbonus.getText().toString());
+                tdeducation =   Double.parseDouble(txtfest.getText().toString()) +  Double.parseDouble(txtstamp.getText().toString())+ Double.parseDouble(txtepf.getText().toString());
+
+
+                calepf1 = Double.parseDouble(txtbas.getText().toString()) * 0.1;
+
+//                calepf = Integer.parseInt(txtbas.getText().toString())+10;
+
+                totalp= (tarning)-(tdeducation + calepf1);
+
                 Salary salary = new Salary();
                 salary.setEname(txtename.getText().toString());
                 salary.setBas(txtbas.getText().toString());
@@ -85,6 +101,9 @@ public class SalaryDetailsActivity extends AppCompatActivity {
                 salary.setFest(txtfest.getText().toString());
                 salary.setStamp(txtstamp.getText().toString());
                 salary.setEpf(txtepf.getText().toString());
+                salary.setTearning(tarning);
+                salary.setTdeducation(tdeducation);
+                salary.setTotalp(totalp);
 
 
 

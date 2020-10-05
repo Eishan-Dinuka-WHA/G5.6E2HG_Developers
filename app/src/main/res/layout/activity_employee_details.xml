@@ -19,14 +19,23 @@
             android:orientation="vertical"
             android:padding="1dp">
 
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="393dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/berkshire_swash"
+                android:text="Update and Delete Employee"
+                android:textAlignment="center"
+                android:textColor="?android:attr/colorEdgeEffect"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/addreg"
-                android:layout_width="383dp"
-                android:layout_height="235dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="0dp"
+                android:layout_width="393dp"
+                android:layout_height="222dp"
                 android:paddingBottom="0dp"
-                app:srcCompat="@drawable/em2" />
+                app:srcCompat="@drawable/em2_2" />
 
             <TextView
                 android:id="@+id/textView42"

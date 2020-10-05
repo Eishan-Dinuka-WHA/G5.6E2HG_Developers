@@ -21,10 +21,9 @@
 
             <ImageView
                 android:id="@+id/addreg"
-                android:layout_width="383dp"
-                android:layout_height="235dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:background="#C6BFBF"
                 android:paddingBottom="0dp"
                 app:srcCompat="@drawable/em2" />
 

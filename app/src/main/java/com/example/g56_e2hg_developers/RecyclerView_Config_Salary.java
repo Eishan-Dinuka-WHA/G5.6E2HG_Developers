@@ -40,6 +40,7 @@ public class RecyclerView_Config_Salary {
         private TextView Tduction;
         private TextView earning;
         private TextView netpay;
+        private TextView epfcal;
 
 
         public SalaryItemView(ViewGroup parent) {
@@ -58,6 +59,7 @@ public class RecyclerView_Config_Salary {
             Tduction = (TextView) itemView.findViewById(R.id.earning_textView);
             earning = (TextView) itemView.findViewById(R.id.deduction_textView);
             netpay = (TextView) itemView.findViewById(R.id.textView41);
+            epfcal = (TextView) itemView.findViewById(R.id.textView55);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -75,6 +77,7 @@ public class RecyclerView_Config_Salary {
                     intent.putExtra("tdeducation",Tduction.getText().toString());
                     intent.putExtra("tearning",earning.getText().toString());
                     intent.putExtra("totalp",netpay.getText().toString());
+                    intent.putExtra("calepff",epfcal.getText().toString());
 
                     sContext.startActivity(intent);
 
@@ -96,6 +99,7 @@ public class RecyclerView_Config_Salary {
             Tduction.setText(String.valueOf(salary.getTdeducation()));
             earning.setText(String.valueOf(salary.getTearning()));
             netpay.setText(String.valueOf(salary.getTotalp()));
+            epfcal.setText(String.valueOf(salary.getCalepff()));
 
             this.key = key;
         }

@@ -123,7 +123,7 @@ public class Add_EmpActivity extends AppCompatActivity implements AdapterView.On
                     txtadd.setError("Enter Address is Required.");
                     return;
                 }
-                else if (nic.length() < 11) {
+                else if (nic.length() < 10) {
                     txtnic.setError("Enter Valid NIC is Required.");
                     return;
                 }

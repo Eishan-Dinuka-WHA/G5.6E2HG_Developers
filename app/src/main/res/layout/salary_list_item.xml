@@ -252,14 +252,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="5dp"
         android:inputType="textMultiLine"
         android:text="@string/E_Total_d"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+        app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
     <TextView
         android:id="@+id/textView38"
@@ -273,6 +273,19 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/E_Epf"
+        android:textColor="#AA3434"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <TextView
         android:id="@+id/textView39"
@@ -308,5 +321,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="4dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epf_textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

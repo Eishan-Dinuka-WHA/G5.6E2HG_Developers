@@ -10,15 +10,15 @@ public class Salary {
     private String fest;
     private String stamp;
     private String epf;
-    private int tearning;
-    private int tdeducation;
-    private int totalp;
-    private float calepf;
+    private Double tearning;
+    private Double tdeducation;
+    private Double totalp;
+    private Double calepff;
 
     public Salary() {
     }
 
-    public Salary(String ename, String bas, String over, String allow, String bonus, String fest, String stamp, String epf, int tearning, int tdeducation, int totalp, int calepf) {
+    public Salary(String ename, String bas, String over, String allow, String bonus, String fest, String stamp, String epf, Double tearning, Double tdeducation, Double totalp, Double calepff) {
         this.ename = ename;
         this.bas = bas;
         this.over = over;
@@ -30,7 +30,7 @@ public class Salary {
         this.tearning = tearning;
         this.tdeducation = tdeducation;
         this.totalp = totalp;
-        this.calepf = calepf;
+        this.calepff = calepff;
     }
 
     public String getEname() {
@@ -97,35 +97,35 @@ public class Salary {
         this.epf = epf;
     }
 
-    public int getTearning() {
+    public Double getTearning() {
         return tearning;
     }
 
-    public void setTearning(int tearning) {
+    public void setTearning(Double tearning) {
         this.tearning = tearning;
     }
 
-    public int getTdeducation() {
+    public Double getTdeducation() {
         return tdeducation;
     }
 
-    public void setTdeducation(int tdeducation) {
+    public void setTdeducation(Double tdeducation) {
         this.tdeducation = tdeducation;
     }
 
-    public int getTotalp() {
+    public Double getTotalp() {
         return totalp;
     }
 
-    public void setTotalp(int totalp) {
+    public void setTotalp(Double totalp) {
         this.totalp = totalp;
     }
 
-    public float getCalepf() {
-        return calepf;
+    public Double getCalepff() {
+        return calepff;
     }
 
-    public void setCalepf(float calepf) {
-        this.calepf = calepf;
+    public void setCalepff(Double calepff) {
+        this.calepff = calepff;
     }
 }

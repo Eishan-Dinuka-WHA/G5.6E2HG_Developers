@@ -131,5 +131,7 @@
     <string name="res_location">Enter Your Delivery Location</string>
     <string name="res_qty">Quantity</string>
     <string name="res_detl">Enter Your Details</string>
+    <string name="attendance_list">Attendance List</string>
+    <string name="employee_list">Employee List</string>
 
 </resources>

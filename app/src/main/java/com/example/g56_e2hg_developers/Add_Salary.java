@@ -22,10 +22,11 @@ public class Add_Salary extends AppCompatActivity {
     private EditText txtfest;
     private EditText txtstamp;
     private EditText txtepf;
-    private int tdeducation;
-    private int tarning;
-    private int totalp;
-    private float calepf;
+    private Double tdeducation;
+    private Double tarning;
+    private Double totalp;
+    private Double calepf;
+    private Double calepf1;
 
     private Button sAddbutton;
     private Button sBack_btn;
@@ -95,12 +96,11 @@ public class Add_Salary extends AppCompatActivity {
                     return;
                 }
 
-                tarning = Integer.parseInt(txtbas.getText().toString()) + Integer.parseInt(txtover.getText().toString())+Integer.parseInt(txtallow.getText().toString())+Integer.parseInt(txtbonus.getText().toString());
-                tdeducation =  Integer.parseInt(txtfest.getText().toString()) + Integer.parseInt(txtstamp.getText().toString())+Integer.parseInt(txtepf.getText().toString());
-                //calepf = Integer.parseInt(txtbas.getText().toString())*(10/100.0f);
+                tarning =  Double.parseDouble(txtbas.getText().toString()) + Double.parseDouble(txtover.getText().toString())+ Double.parseDouble(txtallow.getText().toString())+ Double.parseDouble(txtbonus.getText().toString());
+                calepf1 = Double.parseDouble(txtbas.getText().toString()) * 0.1;
+                tdeducation =   Double.parseDouble(txtfest.getText().toString()) +  Double.parseDouble(txtstamp.getText().toString())+ Double.parseDouble(txtepf.getText().toString())+calepf1;
+
                 totalp= tarning-tdeducation;
-
-
 
 
                 Salary salary = new Salary();
@@ -114,7 +114,9 @@ public class Add_Salary extends AppCompatActivity {
                 salary.setEpf(txtepf.getText().toString());
                 salary.setTearning(tarning);
                 salary.setTdeducation(tdeducation);
+                salary.setCalepff(calepf1);
                 salary.setTotalp(totalp);
+
 
                 new FirebaseDatabaseHelperForSalary().addSalary(salary, new FirebaseDatabaseHelperForSalary.DataStatus() {
                     @Override
@@ -152,14 +154,11 @@ public class Add_Salary extends AppCompatActivity {
             }
         });
     }
-    public static int calcear( int basic, int overtime, int allownce  ){
-        int val;
-        val = basic+overtime+allownce;
+    public static double calcear(double basic, double overtime, double allownce ,double bonus ){
+        double val;
+        val = basic+ overtime+ allownce+bonus;
         return val;
     }
 
-    public float newTest(float one, float two, float three){
-        return one+two+three;
-
-    }
+//    public  static  double clcdudu(double  )
 }

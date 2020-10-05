@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class ResDetailsActvitity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class ResDetailsActvitity extends AppCompatActivity {
     private Spinner txtmeal;
     private Spinner txtsize;
     private Spinner txtquantity;
@@ -43,25 +43,6 @@ public class ResDetailsActvitity extends AppCompatActivity implements AdapterVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res_details_actvitity);
 
-        //        change spinner colour ------------------------------------------------------------------------------------------------------
-        Spinner coloredSpinner = findViewById(R.id.reet_selectedd);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource( this,R.array.meal,R.layout.color_spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner.setAdapter(adapter);
-        coloredSpinner.setOnItemSelectedListener(this);
-        //        change spinner colour ------------------------------------------------------------------------------------------------------
-        Spinner coloredSpinner1 = findViewById(R.id.reet_selected);
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource( this,R.array.portion_type,R.layout.color_spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner1.setAdapter(adapter1);
-        coloredSpinner1.setOnItemSelectedListener(this);
-        //        change spinner colour ------------------------------------------------------------------------------------------------------
-        Spinner coloredSpinner2 = findViewById(R.id.reet_quea);
-        ArrayAdapter adapter2 = ArrayAdapter.createFromResource( this,R.array.quantity,R.layout.color_spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner2.setAdapter(adapter2);
-        coloredSpinner2.setOnItemSelectedListener(this);
-// -----------------------------------------------------------------------------------------------------------------------------------
 
 
         key = getIntent().getStringExtra("key");
@@ -189,15 +170,5 @@ public class ResDetailsActvitity extends AppCompatActivity implements AdapterVie
             }
         }
         return index;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 }

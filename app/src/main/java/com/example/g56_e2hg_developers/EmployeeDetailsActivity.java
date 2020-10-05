@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class EmployeeDetailsActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
+public class EmployeeDetailsActivity extends AppCompatActivity {
     private EditText txtID;
     private EditText txtFname;
     private EditText txtmob;
@@ -47,31 +47,6 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_details);
 
-        //        change spinner colour ------------------------------------------------------------------------------------------------------
-        Spinner coloredSpinner = findViewById(R.id.ett_gens);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner.setAdapter(adapter);
-        coloredSpinner.setOnItemSelectedListener(this);
-
-        Spinner coloredSpinner2 = findViewById(R.id.ett_des);
-        ArrayAdapter adapter2 = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
-        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner2.setAdapter(adapter2);
-        coloredSpinner2.setOnItemSelectedListener(this);
-
-        Spinner coloredSpinner3 = findViewById(R.id.ett_eetype);
-        ArrayAdapter adapter3 = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
-        adapter3.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner3.setAdapter(adapter3);
-
-        coloredSpinner.setOnItemSelectedListener(this);
-        Spinner coloredSpinner4 = findViewById(R.id.ett_edu);
-        ArrayAdapter adapter4 = ArrayAdapter.createFromResource( this,R.array.Gender_catagory,R.layout.color_spinner_layout);
-        adapter4.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-        coloredSpinner4.setAdapter(adapter4);
-        coloredSpinner4.setOnItemSelectedListener(this);
-// -----------------------------------------------------------------------------------------------------------------------------------
 
 
         key = getIntent().getStringExtra("key");
@@ -203,15 +178,5 @@ public class EmployeeDetailsActivity extends AppCompatActivity  implements Adapt
             }
         }
         return index;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 }

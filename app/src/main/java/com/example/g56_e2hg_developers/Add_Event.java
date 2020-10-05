@@ -120,6 +120,7 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
                     return;
                 }
 
+
                 total = Integer.parseInt(txthprice.getText().toString()) * Integer.parseInt(txtnop.getText().toString());
 
 
