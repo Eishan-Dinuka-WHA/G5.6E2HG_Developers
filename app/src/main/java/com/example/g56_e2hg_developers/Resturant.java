@@ -12,11 +12,13 @@ public class Resturant {
     private String house_no;
     private String street;
     private String city;
+    private String time;
+    private Double total;
 
     public Resturant() {
     }
 
-    public Resturant(String meal, String size, String quantity, String details, String cus_name, String con_no, String email, String location, String house_no, String street, String city) {
+    public Resturant(String meal, String size, String quantity, String details, String cus_name, String con_no, String email, String location, String house_no, String street, String city, String time, Double total) {
         this.meal = meal;
         this.size = size;
         this.quantity = quantity;
@@ -28,6 +30,8 @@ public class Resturant {
         this.house_no = house_no;
         this.street = street;
         this.city = city;
+        this.time = time;
+        this.total = total;
     }
 
     public String getMeal() {
@@ -116,5 +120,21 @@ public class Resturant {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
     }
 }

@@ -288,6 +288,37 @@
                     android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/design_default_color_primary_dark">
+
+                <TextView
+                    android:id="@+id/textView8011"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingTop="20dp"
+                    android:text="@string/time_res"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/reet_selecteddd"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:ems="10"
+                    android:entries="@array/time"
+                    android:inputType="text"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="24sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
