@@ -9,11 +9,11 @@
     <Button
         android:id="@+id/empmanagebtn"
         android:layout_width="242dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="656dp"
         android:background="@android:drawable/button_onoff_indicator_on"
         android:backgroundTint="#003d7a"
-        android:fontFamily="monospace"
+        android:fontFamily="@font/bigshot_one"
         android:text="@string/manage"
         android:textColor="@color/cardview_light_background"
         android:textSize="24sp"

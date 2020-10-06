@@ -9,7 +9,7 @@ public class Add_SalaryTest1 {
 
 
     @Test
-    public void newTest() {
+    public void calcear() {
 
         double input1 = 1000;
         double input2 = 1000;

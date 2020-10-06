@@ -66,41 +66,35 @@ public class Add_Salary extends AppCompatActivity {
                 if (TextUtils.isEmpty(name)) {
                     txtsname.setError("Enter Name is Required.");
                     return;
-                }
-                else if (TextUtils.isEmpty(bas)) {
+                } else if (TextUtils.isEmpty(bas)) {
                     txtbas.setError("Enter Basic Salary");
                     return;
-                }
-                else if (TextUtils.isEmpty(over)) {
+                } else if (TextUtils.isEmpty(over)) {
                     txtover.setError("Enter over time ");
                     return;
-                }
-                else if (TextUtils.isEmpty(allow)) {
+                } else if (TextUtils.isEmpty(allow)) {
                     txtallow.setError("Enter allowance Salary");
                     return;
-                }
-                else if (TextUtils.isEmpty(bonus)) {
+                } else if (TextUtils.isEmpty(bonus)) {
                     txtbonus.setError("Enter Bonus Salary");
                     return;
-                }
-                else if (TextUtils.isEmpty(fest)) {
+                } else if (TextUtils.isEmpty(fest)) {
                     txtfest.setError("Enter Fest Advance Salary");
                     return;
-                }
-                else if (TextUtils.isEmpty(stamp)) {
+                } else if (TextUtils.isEmpty(stamp)) {
                     txtstamp.setError("Enter stamp");
                     return;
-                }
-                else if (TextUtils.isEmpty(epf)) {
+                } else if (TextUtils.isEmpty(epf)) {
                     txtepf.setError("Enter loan");
                     return;
                 }
 
-                tarning =  Double.parseDouble(txtbas.getText().toString()) + Double.parseDouble(txtover.getText().toString())+ Double.parseDouble(txtallow.getText().toString())+ Double.parseDouble(txtbonus.getText().toString());
+                //calcear()
+                tarning = Double.parseDouble(txtbas.getText().toString()) + Double.parseDouble(txtover.getText().toString()) + Double.parseDouble(txtallow.getText().toString()) + Double.parseDouble(txtbonus.getText().toString());
                 calepf1 = Double.parseDouble(txtbas.getText().toString()) * 0.1;
-                tdeducation =   Double.parseDouble(txtfest.getText().toString()) +  Double.parseDouble(txtstamp.getText().toString())+ Double.parseDouble(txtepf.getText().toString())+calepf1;
+                tdeducation = Double.parseDouble(txtfest.getText().toString()) + Double.parseDouble(txtstamp.getText().toString()) + Double.parseDouble(txtepf.getText().toString()) + calepf1;
 
-                totalp= tarning-tdeducation;
+                totalp = tarning - tdeducation;
 
 
                 Salary salary = new Salary();
@@ -154,11 +148,28 @@ public class Add_Salary extends AppCompatActivity {
             }
         });
     }
-    public static double calcear(double basic, double overtime, double allownce ,double bonus ){
+
+    public static double calcear(double basic, double overtime, double allownce, double bonus) {
         double val;
-        val = basic+ overtime+ allownce+bonus;
+        val = basic + overtime + allownce + bonus;
         return val;
     }
 
-//    public  static  double clcdudu(double  )
+    public static double calduc(double fest, double stamp, double loan) {
+        double val1;
+        val1 = fest + stamp + loan;
+        return val1;
+    }
+
+    public static double calcepf(double basic) {
+        double val2;
+        val2 = basic * 0.1;
+        return val2;
+    }
+
+    public static double total(double tdedu,double tearing, double epff){
+        double val3;
+        val3 = tdedu -(tearing+epff);
+        return val3;
+    }
 }

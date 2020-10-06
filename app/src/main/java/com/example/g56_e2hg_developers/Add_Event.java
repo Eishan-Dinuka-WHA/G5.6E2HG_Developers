@@ -191,4 +191,11 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
         txtdate.setText(currentDate);
 
     }
+
+    public static double calc(double nop, double hpric) {
+        double va;
+        va = nop * hpric;
+        return va;
+    }
+
 }

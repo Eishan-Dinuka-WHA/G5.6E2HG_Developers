@@ -8,16 +8,20 @@
 
     <Button
         android:id="@+id/room"
-        android:layout_width="194dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="636dp"
-        android:layout_marginBottom="49dp"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="656dp"
+        android:layout_marginBottom="27dp"
         android:background="@android:drawable/button_onoff_indicator_off"
         android:backgroundTint="#AA9E9E"
-        android:text="Rooms"
+        android:fontFamily="@font/bigshot_one"
+        android:text="@string/booking"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
