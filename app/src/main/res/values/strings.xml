@@ -134,5 +134,6 @@
     <string name="attendance_list">Attendance List</string>
     <string name="employee_list">Employee List</string>
     <string name="time_res">When would you like to place your order</string>
+    <string name="order_now">Order Now</string>
 
 </resources>
