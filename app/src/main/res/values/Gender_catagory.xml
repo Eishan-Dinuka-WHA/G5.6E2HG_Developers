@@ -31,6 +31,6 @@
         <item>Present</item>
         <item>Absent</item>
         <item>Half Day</item>
-        <item>Holi Day</item>
+        <item>Holiday</item>
     </string-array>
 </resources>
