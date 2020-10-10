@@ -95,7 +95,6 @@
     <string name="stamp">STAMP</string>
     <string name="loan">Loan</string>
     <string name="fastival_advance">Fastival Advance</string>
-    <string name="employee_name">Employee Name</string>
     <string name="g_name">Name</string>
     <string name="g_email">Email</string>
     <string name="g_roomtype">Room Type</string>
@@ -133,5 +132,6 @@
     <string name="res_detl">Enter Your Details</string>
     <string name="attendance_list">Attendance List</string>
     <string name="employee_list">Employee List</string>
+    <string name="employee_name">Employee Name</string>
 
 </resources>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,6 +30,7 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
 
     private Button mDelete_btn;
     private Button mUpdate_btn;
+    private Button sBack_btn;
 
     private String key;
     private String id;
@@ -88,10 +90,45 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
 
         mUpdate_btn = (Button) findViewById(R.id.up_btn);
         mDelete_btn = (Button) findViewById(R.id.del_btn);
+        sBack_btn = (Button) findViewById(R.id.back_bb);
 
         mUpdate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String fname = txtFname.getText().toString().trim();
+                String mobile = txtmob.getText().toString().trim();
+                String add = txtadd.getText().toString().trim();
+                String nic = txtdnic.getText().toString().trim();
+                String dob = txtdob.getText().toString().trim();
+
+
+                if (TextUtils.isEmpty(fname)) {
+                    txtFname.setError("Enter Name is Required.");
+                    return;
+                }
+                else if (TextUtils.isEmpty(mobile)) {
+                    txtmob.setError("Enter valid mobile number");
+                    return;
+                }
+                if (mobile.length() < 10) {
+                    txtmob.setError("Enter corrate mobile");
+                    return;
+                }
+
+                else if (TextUtils.isEmpty(add)) {
+                    txtadd.setError("Enter Address is Required.");
+                    return;
+                }
+                else if (nic.length() < 10) {
+                    txtdnic.setError("Enter Valid NIC is Required.");
+                    return;
+                }
+                else if (TextUtils.isEmpty(dob)) {
+                    txtdob.setError("Enter DOB is Required.");
+                    return;
+                }
+                
 
                 Employee employee = new Employee();
                 employee.setId(id);
@@ -126,6 +163,14 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
 
                     }
                 });
+            }
+        });
+
+        sBack_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                return;
             }
         });
 

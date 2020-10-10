@@ -11,13 +11,13 @@ public class Add_SalaryTest4 {
 
         double input1 = 200;
         double input2 = 100;
-        double input3 = 100;
+
         double output;
 
         double expected = 100.0;
         double delta = 0.001;
 
-        output = Add_Salary.total(300,100,100);
+        output = Add_Salary.total(200,100);
 
         assertEquals(100.0, output,delta);
     }

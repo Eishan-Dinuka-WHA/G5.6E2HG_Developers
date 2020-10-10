@@ -5,7 +5,8 @@
     style="?android:attr/listSeparatorTextViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/colorPrimary">
+    android:background="#E4D0D0"
+    android:backgroundTint="#E4D0D0">
 
 
     <ImageView

@@ -89,12 +89,13 @@ public class Add_Salary extends AppCompatActivity {
                     return;
                 }
 
-                //calcear()
-                tarning = Double.parseDouble(txtbas.getText().toString()) + Double.parseDouble(txtover.getText().toString()) + Double.parseDouble(txtallow.getText().toString()) + Double.parseDouble(txtbonus.getText().toString());
-                calepf1 = Double.parseDouble(txtbas.getText().toString()) * 0.1;
-                tdeducation = Double.parseDouble(txtfest.getText().toString()) + Double.parseDouble(txtstamp.getText().toString()) + Double.parseDouble(txtepf.getText().toString()) + calepf1;
 
-                totalp = tarning - tdeducation;
+                tarning =  calcear( Double.parseDouble(txtbas.getText().toString()) , Double.parseDouble(txtover.getText().toString()) , Double.parseDouble(txtallow.getText().toString()) , Double.parseDouble(txtbonus.getText().toString()));
+                calepf1 =  calcepf(Double.parseDouble(txtbas.getText().toString()));
+                tdeducation = calduc(Double.parseDouble(txtfest.getText().toString()) , Double.parseDouble(txtstamp.getText().toString()) , Double.parseDouble(txtepf.getText().toString()) , calepf1);
+
+                totalp =   total(tarning,tdeducation);
+
 
 
                 Salary salary = new Salary();
@@ -107,8 +108,8 @@ public class Add_Salary extends AppCompatActivity {
                 salary.setStamp(txtstamp.getText().toString());
                 salary.setEpf(txtepf.getText().toString());
                 salary.setTearning(tarning);
-                salary.setTdeducation(tdeducation);
                 salary.setCalepff(calepf1);
+                salary.setTdeducation(tdeducation);
                 salary.setTotalp(totalp);
 
 
@@ -155,9 +156,9 @@ public class Add_Salary extends AppCompatActivity {
         return val;
     }
 
-    public static double calduc(double fest, double stamp, double loan) {
+    public static double calduc(double fest, double stamp, double loan, double epf) {
         double val1;
-        val1 = fest + stamp + loan;
+        val1 = fest + stamp + loan + epf;
         return val1;
     }
 
@@ -167,9 +168,9 @@ public class Add_Salary extends AppCompatActivity {
         return val2;
     }
 
-    public static double total(double tdedu,double tearing, double epff){
+    public static double total(double tearing,double tdedu){
         double val3;
-        val3 = tdedu -(tearing+epff);
+        val3 = tearing -tdedu;
         return val3;
     }
 }

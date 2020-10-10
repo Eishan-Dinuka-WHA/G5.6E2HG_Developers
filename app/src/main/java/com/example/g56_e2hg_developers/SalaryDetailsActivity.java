@@ -3,6 +3,7 @@ package com.example.g56_e2hg_developers;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class SalaryDetailsActivity extends AppCompatActivity {
 
-    private EditText txtename;
+    private EditText txtsname;
     private EditText txtbas;
     private EditText txtover;
     private EditText txtallow;
@@ -26,6 +27,8 @@ public class SalaryDetailsActivity extends AppCompatActivity {
 
     private Button sDelete_btn;
     private Button sUpdate_btn;
+    private Button sBack_btn;
+
 
     private String key;
     private String ename;
@@ -58,8 +61,8 @@ public class SalaryDetailsActivity extends AppCompatActivity {
         stamp = getIntent().getStringExtra("stamp");
         epf = getIntent().getStringExtra("epf");
 
-        txtename = (EditText) findViewById(R.id.ett_eename);
-        txtename.setText(ename);
+        txtsname = (EditText) findViewById(R.id.ett_eename);
+        txtsname.setText(ename);
         txtbas = (EditText) findViewById(R.id.ett_bas);
         txtbas.setText(bas);
         txtover = (EditText) findViewById(R.id.ett_over);
@@ -77,23 +80,57 @@ public class SalaryDetailsActivity extends AppCompatActivity {
 
         sUpdate_btn = (Button) findViewById(R.id.Up_BTN);
         sDelete_btn = (Button) findViewById(R.id.Del);
+        sBack_btn = (Button) findViewById(R.id.BACK_SAL);
 
         sUpdate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                tarning =  Double.parseDouble(txtbas.getText().toString()) +  Double.parseDouble(txtover.getText().toString())+ Double.parseDouble(txtallow.getText().toString())+ Double.parseDouble(txtbonus.getText().toString());
-                tdeducation =   Double.parseDouble(txtfest.getText().toString()) +  Double.parseDouble(txtstamp.getText().toString())+ Double.parseDouble(txtepf.getText().toString());
+                String name = txtsname.getText().toString().trim();
+                String bas = txtbas.getText().toString().trim();
+                String over = txtover.getText().toString().trim();
+                String allow = txtallow.getText().toString().trim();
+                String bonus = txtbonus.getText().toString().trim();
+                String fest = txtfest.getText().toString().trim();
+                String stamp = txtstamp.getText().toString().trim();
+                String epf = txtepf.getText().toString().trim();
 
 
-                calepf1 = Double.parseDouble(txtbas.getText().toString()) * 0.1;
+                if (TextUtils.isEmpty(name)) {
+                    txtsname.setError("Enter Name is Required.");
+                    return;
+                } else if (TextUtils.isEmpty(bas)) {
+                    txtbas.setError("Enter Basic Salary");
+                    return;
+                } else if (TextUtils.isEmpty(over)) {
+                    txtover.setError("Enter over time ");
+                    return;
+                } else if (TextUtils.isEmpty(allow)) {
+                    txtallow.setError("Enter allowance Salary");
+                    return;
+                } else if (TextUtils.isEmpty(bonus)) {
+                    txtbonus.setError("Enter Bonus Salary");
+                    return;
+                } else if (TextUtils.isEmpty(fest)) {
+                    txtfest.setError("Enter Fest Advance Salary");
+                    return;
+                } else if (TextUtils.isEmpty(stamp)) {
+                    txtstamp.setError("Enter stamp");
+                    return;
+                } else if (TextUtils.isEmpty(epf)) {
+                    txtepf.setError("Enter loan");
+                    return;
+                }
 
-//                calepf = Integer.parseInt(txtbas.getText().toString())+10;
 
-                totalp= (tarning)-(tdeducation + calepf1);
+                tarning =  calcear( Double.parseDouble(txtbas.getText().toString()) , Double.parseDouble(txtover.getText().toString()) , Double.parseDouble(txtallow.getText().toString()) , Double.parseDouble(txtbonus.getText().toString()));
+                calepf1 =  calcepf(Double.parseDouble(txtbas.getText().toString()));
+                tdeducation = calduc(Double.parseDouble(txtfest.getText().toString()) , Double.parseDouble(txtstamp.getText().toString()) , Double.parseDouble(txtepf.getText().toString()) , calepf1);
+                totalp =   total(tarning,tdeducation);
+
 
                 Salary salary = new Salary();
-                salary.setEname(txtename.getText().toString());
+                salary.setEname(txtsname.getText().toString());
                 salary.setBas(txtbas.getText().toString());
                 salary.setOver(txtover.getText().toString());
                 salary.setAllow(txtallow.getText().toString());
@@ -103,6 +140,7 @@ public class SalaryDetailsActivity extends AppCompatActivity {
                 salary.setEpf(txtepf.getText().toString());
                 salary.setTearning(tarning);
                 salary.setTdeducation(tdeducation);
+                salary.setCalepff(calepf1);
                 salary.setTotalp(totalp);
 
 
@@ -161,5 +199,37 @@ public class SalaryDetailsActivity extends AppCompatActivity {
                 });
             }
         });
+
+        sBack_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                return;
+            }
+        });
+    }
+
+    public static double calcear(double basic, double overtime, double allownce, double bonus) {
+        double val;
+        val = basic + overtime + allownce + bonus;
+        return val;
+    }
+
+    public static double calduc(double fest, double stamp, double loan, double epf) {
+        double val1;
+        val1 = fest + stamp + loan + epf;
+        return val1;
+    }
+
+    public static double calcepf(double basic) {
+        double val2;
+        val2 = basic * 0.1;
+        return val2;
+    }
+
+    public static double total(double tearing,double tdedu){
+        double val3;
+        val3 = tearing - tdedu;
+        return val3;
     }
 }

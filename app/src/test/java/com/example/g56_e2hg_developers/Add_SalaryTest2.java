@@ -22,13 +22,14 @@ public class Add_SalaryTest2 {
         double input1 = 1000;
         double input2 = 1000;
         double input3 = 1000;
+        double input4 = 1000;
         double output;
 
-        double expected = 3000;
+        double expected = 4000;
         double delta = 0.001;
 
-        output = Add_Salary.calduc(1000, 1000, 1000);
+        output = Add_Salary.calduc(1000, 1000, 1000,1000);
 
-        assertEquals(3000, output,delta);
+        assertEquals(4000, output,delta);
     }
 }
