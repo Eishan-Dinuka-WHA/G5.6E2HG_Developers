@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="286dp"
                 android:paddingBottom="5dp"
-                app:srcCompat="@drawable/r7" />
+                app:srcCompat="@drawable/ee3" />
 
             <ImageView
                 android:id="@+id/re3"

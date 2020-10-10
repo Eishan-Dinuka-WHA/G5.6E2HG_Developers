@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="meal">
+        <item>Select</item>
         <item>Pizza- Chicken Sausage Meat</item>
         <item>Pizza- Super Supreme</item>
         <item>Pizza- Prawn with Chicken Bacon</item>
@@ -12,17 +13,29 @@
     </string-array>
 
     <string-array name="portion_type">
+        <item>Select</item>
         <item>Medium Rs.500</item>
         <item>Large Rs.800</item>
 
     </string-array>
 
     <string-array name="quantity">
+        <item>Select</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
         <item>6</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Select</item>
+        <item>Now</item>
+        <item>Today Morning</item>
+        <item>Today Noon</item>
+        <item>Today Evening</item>
+        <item>Today Night</item>
+        <item>Tomorrow Morning</item>
     </string-array>
 </resources>

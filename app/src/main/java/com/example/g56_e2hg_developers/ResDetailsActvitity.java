@@ -17,6 +17,7 @@ public class ResDetailsActvitity extends AppCompatActivity {
     private Spinner txtmeal;
     private Spinner txtsize;
     private Spinner txtquantity;
+    private Spinner txttime;
     private EditText txtname;
     private EditText txtcontacts;
     private EditText txtemail;
@@ -37,6 +38,7 @@ public class ResDetailsActvitity extends AppCompatActivity {
     private String house_no;
     private String street;
     private String city;
+    private String time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class ResDetailsActvitity extends AppCompatActivity {
         house_no = getIntent().getStringExtra("house_no");
         street = getIntent().getStringExtra("street");
         city = getIntent().getStringExtra("city");
+        time = getIntent().getStringExtra("time");
 
 
         txtmeal = (Spinner) findViewById(R.id.reet_selectedd);
@@ -65,6 +68,9 @@ public class ResDetailsActvitity extends AppCompatActivity {
 
         txtquantity = (Spinner) findViewById(R.id.reet_quea);
         txtquantity.setSelection(getIndex_spinnerItem(txtquantity, quantity));
+
+        txttime = (Spinner) findViewById(R.id.reet_selecteddd);
+        txttime.setSelection(getIndex_spinnerItem(txttime, time));
 
         txtname = (EditText) findViewById(R.id.rett_name);
         txtname.setText(cus_name);
@@ -101,6 +107,7 @@ public class ResDetailsActvitity extends AppCompatActivity {
                 resturant.setHouse_no(txthouse.getText().toString());
                 resturant.setStreet(txtstreet.getText().toString());
                 resturant.setCity(txtcity.getText().toString());
+                resturant.setTime(txttime.getSelectedItem().toString());
 
 
                 new FirebaseDatabaseHelpersForResturant().UpdateResturants(key, resturant, new FirebaseDatabaseHelpersForResturant.DataStatus() {

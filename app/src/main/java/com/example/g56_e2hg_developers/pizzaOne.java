@@ -24,6 +24,7 @@ public class pizzaOne extends AppCompatActivity {
     private EditText txthouse;
     private EditText txtstreet;
     private EditText txtcity;
+    private Spinner txttime;
 
     private Button sAddbutton;
     private Button sBack_btn;
@@ -46,6 +47,7 @@ public class pizzaOne extends AppCompatActivity {
         txthouse = (EditText) findViewById(R.id.rett_hno);
         txtstreet  = (EditText) findViewById(R.id.rett_street);
         txtcity  = (EditText) findViewById(R.id.rett_city);
+        txttime  = (Spinner) findViewById(R.id.reet_selecteddd);
 
 
         sAddbutton = (Button) findViewById(R.id.sub_btn);
@@ -104,6 +106,7 @@ public class pizzaOne extends AppCompatActivity {
                 resturant.setHouse_no(txthouse.getText().toString());
                 resturant.setStreet(txtstreet.getText().toString());
                 resturant.setCity(txtcity.getText().toString());
+                resturant.setTime(txttime.getSelectedItem().toString());
 
 
                 new FirebaseDatabaseHelpersForResturant().addResturants(resturant, new FirebaseDatabaseHelpersForResturant.DataStatus() {

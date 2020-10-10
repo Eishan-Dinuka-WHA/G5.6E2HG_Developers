@@ -115,8 +115,8 @@
     <string name="res_redbean">Red Bean Rice</string>
     <string name="res_mix">Chicken Mix Rice</string>
     <string name="res_lankan">Sri Lankan Rice</string>
-    <string name="res_pizza">Pizza</string>
-    <string name="res_rice">Rice</string>
+    <string name="res_pizza">Pizza Menu</string>
+    <string name="res_rice">Rice Menu</string>
     <string name="res_medium">Medium Value pizza - LKR500.00</string>
     <string name="res_large">Large Value Pizza - LKR800.00</string>
     <string name="res_mediumm">Large Value Rice - LKR800.00</string>
@@ -132,6 +132,8 @@
     <string name="res_detl">Enter Your Details</string>
     <string name="attendance_list">Attendance List</string>
     <string name="employee_list">Employee List</string>
+    <string name="time_res">When would you like to place your order</string>
+    <string name="order_now">Order Now</string>
     <string name="employee_name">Employee Name</string>
 
 </resources>
