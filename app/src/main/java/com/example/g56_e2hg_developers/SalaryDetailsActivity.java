@@ -62,7 +62,7 @@ public class SalaryDetailsActivity extends AppCompatActivity {
         epf = getIntent().getStringExtra("epf");
 
         txtsname = (EditText) findViewById(R.id.ett_eename);
-        txtsname.setText(ename);
+        txtsname.setText("Sachi Perera");
         txtbas = (EditText) findViewById(R.id.ett_bas);
         txtbas.setText(bas);
         txtover = (EditText) findViewById(R.id.ett_over);
