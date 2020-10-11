@@ -25,6 +25,7 @@ public class pizzaOne extends AppCompatActivity {
     private EditText txtstreet;
     private EditText txtcity;
     private Spinner txttime;
+    private Double total;
 
     private Button sAddbutton;
     private Button sBack_btn;
@@ -96,6 +97,13 @@ public class pizzaOne extends AppCompatActivity {
                 }
 
 
+                if(txtsize.getSelectedItem().toString().equals("Medium Rs.500")){
+                    total = 500 * Double.parseDouble(txtquantity.getSelectedItem().toString());
+                }
+                else if(txtsize.getSelectedItem().toString().equals("Large Rs.800")){
+                    total = 800 * Double.parseDouble(txtquantity.getSelectedItem().toString());
+                }
+
                 Resturant resturant = new Resturant();
                 resturant.setMeal(txtmeal.getSelectedItem().toString());
                 resturant.setSize(txtsize.getSelectedItem().toString());
@@ -107,6 +115,7 @@ public class pizzaOne extends AppCompatActivity {
                 resturant.setStreet(txtstreet.getText().toString());
                 resturant.setCity(txtcity.getText().toString());
                 resturant.setTime(txttime.getSelectedItem().toString());
+                resturant.setTotal(total);
 
 
                 new FirebaseDatabaseHelpersForResturant().addResturants(resturant, new FirebaseDatabaseHelpersForResturant.DataStatus() {
@@ -117,7 +126,7 @@ public class pizzaOne extends AppCompatActivity {
 
                     @Override
                     public void DataIsInserted() {
-
+                        Toast.makeText(pizzaOne.this,"Booked Successfully",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

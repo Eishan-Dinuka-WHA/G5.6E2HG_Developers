@@ -24,6 +24,7 @@ public class ResDetailsActvitity extends AppCompatActivity {
     private EditText txthouse;
     private EditText txtstreet;
     private EditText txtcity;
+    private Double total;
 
     private Button mDelete_btn;
     private Button mUpdate_btn;
@@ -44,8 +45,6 @@ public class ResDetailsActvitity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res_details_actvitity);
-
-
 
         key = getIntent().getStringExtra("key");
         meal = getIntent().getStringExtra("meal");
@@ -97,6 +96,13 @@ public class ResDetailsActvitity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(txtsize.getSelectedItem().toString().equals("Medium Rs.500")){
+                    total = 500 * Double.parseDouble(txtquantity.getSelectedItem().toString());
+                }
+                else if(txtsize.getSelectedItem().toString().equals("Large Rs.800")){
+                    total = 800 * Double.parseDouble(txtquantity.getSelectedItem().toString());
+                }
+
                 Resturant resturant = new Resturant();
                 resturant.setMeal(txtmeal.getSelectedItem().toString());
                 resturant.setSize(txtsize.getSelectedItem().toString());
@@ -108,6 +114,9 @@ public class ResDetailsActvitity extends AppCompatActivity {
                 resturant.setStreet(txtstreet.getText().toString());
                 resturant.setCity(txtcity.getText().toString());
                 resturant.setTime(txttime.getSelectedItem().toString());
+                resturant.setTotal(total);
+
+
 
 
                 new FirebaseDatabaseHelpersForResturant().UpdateResturants(key, resturant, new FirebaseDatabaseHelpersForResturant.DataStatus() {

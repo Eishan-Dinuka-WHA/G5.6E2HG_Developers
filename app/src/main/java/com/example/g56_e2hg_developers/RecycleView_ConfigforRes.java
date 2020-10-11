@@ -36,6 +36,7 @@ public class RecycleView_ConfigforRes {
         private TextView resstreet;
         private TextView rescity;
         private TextView restime;
+        private TextView total;
 
 
         private String key;
@@ -55,6 +56,7 @@ public class RecycleView_ConfigforRes {
             resstreet = (TextView) itemView.findViewById(R.id.textViewsrtret);
             rescity = (TextView) itemView.findViewById(R.id.textView_city);
             restime = (TextView) itemView.findViewById(R.id.textView_time);
+            total = (TextView) itemView.findViewById(R.id.textView_total);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,6 +73,7 @@ public class RecycleView_ConfigforRes {
                     intent.putExtra("srtret",resstreet.getText().toString());
                     intent.putExtra("city",rescity.getText().toString());
                     intent.putExtra("time",restime.getText().toString());
+                    intent.putExtra("total",total.getText().toString());
 
                     mContext.startActivity(intent);
 
@@ -91,6 +94,7 @@ public class RecycleView_ConfigforRes {
             resstreet.setText(resturant.getStreet());
             rescity.setText(resturant.getCity());
             restime.setText(resturant.getTime());
+            total.setText(String.valueOf(resturant.getTotal()));
             this.key = key;
         }
     }

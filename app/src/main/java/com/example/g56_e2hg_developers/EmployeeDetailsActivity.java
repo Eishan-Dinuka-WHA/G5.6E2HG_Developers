@@ -111,7 +111,7 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
                     txtmob.setError("Enter valid mobile number");
                     return;
                 }
-                if (mobile.length() < 10) {
+                if (mobile.length() == 11) {
                     txtmob.setError("Enter corrate mobile");
                     return;
                 }
@@ -128,7 +128,8 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
                     txtdob.setError("Enter DOB is Required.");
                     return;
                 }
-                
+
+
 
                 Employee employee = new Employee();
                 employee.setId(id);
