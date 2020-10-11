@@ -8,28 +8,28 @@
 
     <Button
         android:id="@+id/update_btn3"
-        android:layout_width="203dp"
-        android:layout_height="51dp"
+        android:layout_width="113dp"
+        android:layout_height="44dp"
         android:layout_weight="1"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="@string/Updatess"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <Button
         android:id="@+id/delete_btn2"
-        android:layout_width="202dp"
-        android:layout_height="48dp"
+        android:layout_width="124dp"
+        android:layout_height="44dp"
         android:layout_weight="1"
         android:backgroundTint="?android:attr/colorPressedHighlight"
         android:text="@string/E_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.963" />
@@ -145,6 +145,7 @@
         android:id="@+id/addreg2"
         android:layout_width="417dp"
         android:layout_height="179dp"
+        android:background="@drawable/g7"
         android:paddingLeft="5dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
@@ -153,8 +154,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@drawable/em2"
-        tools:srcCompat="@drawable/g7" />
+        app:layout_constraintVertical_bias="0.001" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

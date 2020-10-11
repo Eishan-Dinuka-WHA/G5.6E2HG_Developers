@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="?android:attr/listSeparatorTextViewStyle"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_red_light"
+    android:backgroundTint="@android:color/tertiary_text_light">
 
     <TextView
         android:id="@+id/textView8"
@@ -13,7 +15,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="18dp"
         android:text="Name"
-        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
