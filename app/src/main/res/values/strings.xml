@@ -128,8 +128,11 @@
     <string name="res_meal">Select Your Meal</string>
     <string name="res_size">Select Portion Size</string>
     <string name="res_location">Enter Your Delivery Location</string>
+    <string name="res_cus_loca">Delivery Location</string>
+    <string name="res_cus_updel">Tap here to update and delete your details</string>
     <string name="res_qty">Quantity</string>
     <string name="res_detl">Enter Your Details</string>
+    <string name="res_cus_det">Customer Details</string>
     <string name="attendance_list">Attendance List</string>
     <string name="employee_list">Employee List</string>
     <string name="time_res">When would you like to place your order</string>

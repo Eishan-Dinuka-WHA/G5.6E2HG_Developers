@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00E2FF"
+    android:background="#B0E0E6"
     tools:context=".ResturantListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleview_res"
         android:layout_width="match_parent"
         android:layout_height="710dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="5dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/resbgrounf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

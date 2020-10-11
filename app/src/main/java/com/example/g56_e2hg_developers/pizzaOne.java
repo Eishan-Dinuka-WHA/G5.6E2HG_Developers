@@ -126,7 +126,7 @@ public class pizzaOne extends AppCompatActivity {
 
                     @Override
                     public void DataIsInserted() {
-                        Toast.makeText(pizzaOne.this,"Booked Successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(pizzaOne.this,"Order Placed Successfully",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

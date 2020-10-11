@@ -8,13 +8,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="123dp"
+        android:layout_width="115dp"
         android:layout_height="47dp"
         android:layout_marginTop="578dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="@font/aclonica"
         android:text="Order"
         android:textSize="18sp"
-        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
