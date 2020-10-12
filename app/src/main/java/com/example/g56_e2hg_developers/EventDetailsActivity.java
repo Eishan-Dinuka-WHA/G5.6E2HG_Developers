@@ -22,6 +22,7 @@ public class EventDetailsActivity extends AppCompatActivity {
     private Spinner txthtype;
     private EditText txtnop;
     private EditText txthprice;
+    private int total;
 
     private Button mDelete_btn;
     private Button mUpdate_btn;
@@ -80,6 +81,8 @@ public class EventDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                total = Integer.parseInt(txthprice.getText().toString()) * Integer.parseInt(txtnop.getText().toString());
+
                 Event event = new Event();
                 event.setEtype(txttype.getSelectedItem().toString());
                 event.setName(txtname.getText().toString());
@@ -90,6 +93,7 @@ public class EventDetailsActivity extends AppCompatActivity {
                 event.setHtype(txthtype.getSelectedItem().toString());
                 event.setNop(txtnop.getText().toString());
                 event.setHprice(txthprice.getText().toString());
+                event.setTotalP(total);
 
                 new FirebaseDatabaseHelperForEvent().UpdateEvents(key, event, new FirebaseDatabaseHelperForEvent.DataStatus() {
                     @Override
@@ -157,5 +161,11 @@ public class EventDetailsActivity extends AppCompatActivity {
             }
         }
         return index;
+    }
+
+    public static double calc(double nop, double hpric) {
+        double va;
+        va = nop * hpric;
+        return va;
     }
 }

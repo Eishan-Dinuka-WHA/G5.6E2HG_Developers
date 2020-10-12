@@ -112,11 +112,11 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
                     return;
                 }
                 else if (TextUtils.isEmpty(nop)) {
-                    txtdate.setError("Enter Number of Plate is Required.");
+                    txtnop.setError("Enter Number of Plate is Required.");
                     return;
                 }
                 else if (TextUtils.isEmpty(price)) {
-                    txtdate.setError("Enter Plate price is Required.");
+                    txthprice.setError("Enter Plate price is Required.");
                     return;
                 }
 
@@ -173,7 +173,7 @@ public class Add_Event extends AppCompatActivity implements AdapterView.OnItemSe
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
     }
 
     @Override

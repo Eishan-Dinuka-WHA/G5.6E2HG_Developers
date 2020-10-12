@@ -94,7 +94,7 @@
                 android:layout_height="60dp"
                 android:fontFamily="@font/berkshire_swash"
                 android:paddingLeft="10dp"
-                android:text="@string/get_to_gehters"
+                android:text="Get Together parties"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
